@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		72344E2717FDC2B60084354A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 72344E2617FDC2B60084354A /* Icon.png */; };
+		72344E2917FDC3930084354A /* IconRes.png in Resources */ = {isa = PBXBuildFile; fileRef = 72344E2817FDC3930084354A /* IconRes.png */; };
 		72EE03D717F5FB8F005E0B62 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72EE03D617F5FB8F005E0B62 /* UIKit.framework */; };
 		72EE03D917F5FB8F005E0B62 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72EE03D817F5FB8F005E0B62 /* Foundation.framework */; };
 		72EE03DB17F5FB8F005E0B62 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72EE03DA17F5FB8F005E0B62 /* CoreGraphics.framework */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		72344E2617FDC2B60084354A /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		72344E2817FDC3930084354A /* IconRes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IconRes.png; sourceTree = "<group>"; };
 		72EE03D317F5FB8F005E0B62 /* WestSchedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WestSchedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72EE03D617F5FB8F005E0B62 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		72EE03D817F5FB8F005E0B62 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -67,6 +71,8 @@
 		72EE03CA17F5FB8E005E0B62 = {
 			isa = PBXGroup;
 			children = (
+				72344E2817FDC3930084354A /* IconRes.png */,
+				72344E2617FDC2B60084354A /* Icon.png */,
 				72EE03DC17F5FB8F005E0B62 /* WestSchedule */,
 				72EE03D517F5FB8F005E0B62 /* Frameworks */,
 				72EE03D417F5FB8F005E0B62 /* Products */,
@@ -184,6 +190,8 @@
 				72EE03F717F5FB8F005E0B62 /* first@2x.png in Resources */,
 				72EE03FC17F5FB8F005E0B62 /* second.png in Resources */,
 				72EE03FE17F5FB8F005E0B62 /* second@2x.png in Resources */,
+				72344E2717FDC2B60084354A /* Icon.png in Resources */,
+				72344E2917FDC3930084354A /* IconRes.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +328,7 @@
 				72EE040317F5FB8F005E0B62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
