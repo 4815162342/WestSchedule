@@ -26,4 +26,30 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)Send:(id)sender {
+    
+    MFMailComposeViewController *mailController = [[MFMailComposeViewController alloc]init];
+    [mailController setMailComposeDelegate:self];
+    NSArray *address = [[NSArray alloc] initWithObjects: @"adamsanders@westminster.net", nil];
+    NSString *message = [[self Message] text];
+    [mailController setMessageBody:message isHTML:NO];
+    [mailController setToRecipients:address];
+    [mailController setSubject:@"Mail From WestSchedule"];
+    [self presentViewController:mailController animated:YES completion:nil];
+    
+}
+
+-(void)touchesBegan:(NSSet *) touches withEvent:(UIEvent *)event
+{
+    [[self Message] resignFirstResponder];
+    
+}
+
+
+-(void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+}
 @end

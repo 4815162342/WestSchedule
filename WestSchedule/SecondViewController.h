@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 
-@interface SecondViewController : UIViewController
+@interface SecondViewController : UIViewController <MFMailComposeViewControllerDelegate>
+
+@property (weak, nonatomic) IBOutlet UITextView *Message;
+
+- (IBAction)Send:(id)sender;
+
 
 @end
