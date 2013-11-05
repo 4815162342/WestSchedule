@@ -19,6 +19,7 @@
     IBOutlet UIButton *Change5;
     IBOutlet UIButton *Change6;
     IBOutlet UIButton *Change7;
+    IBOutlet UIButton *ClearAll;
 }
 
 @property (strong, nonatomic) IBOutlet UIPickerView *Picker;
@@ -48,6 +49,11 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *Class7;
 - (IBAction)Change7:(id)sender;
+
+
+
+- (IBAction)ClearAll:(id)sender;
+
 
 
 //Array of Class names
