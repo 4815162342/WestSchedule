@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		720C0317182965FF00AAA98D /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 720C0316182965FF00AAA98D /* ThirdViewController.m */; };
 		72344E2717FDC2B60084354A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 72344E2617FDC2B60084354A /* Icon.png */; };
 		72344E2917FDC3930084354A /* IconRes.png in Resources */ = {isa = PBXBuildFile; fileRef = 72344E2817FDC3930084354A /* IconRes.png */; };
 		7255797218271BD9001592F5 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7255797118271BD9001592F5 /* MessageUI.framework */; };
@@ -30,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		720C0315182965FF00AAA98D /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		720C0316182965FF00AAA98D /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		72344E2617FDC2B60084354A /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		72344E2817FDC3930084354A /* IconRes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IconRes.png; sourceTree = "<group>"; };
 		7255797118271BD9001592F5 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -108,6 +111,8 @@
 		72EE03DC17F5FB8F005E0B62 /* WestSchedule */ = {
 			isa = PBXGroup;
 			children = (
+				720C0315182965FF00AAA98D /* ThirdViewController.h */,
+				720C0316182965FF00AAA98D /* ThirdViewController.m */,
 				72EE03E517F5FB8F005E0B62 /* AppDelegate.h */,
 				72EE03E617F5FB8F005E0B62 /* AppDelegate.m */,
 				72EE03EE17F5FB8F005E0B62 /* MainStoryboard.storyboard */,
@@ -214,6 +219,7 @@
 				72EE03E717F5FB8F005E0B62 /* AppDelegate.m in Sources */,
 				72EE03F317F5FB8F005E0B62 /* FirstViewController.m in Sources */,
 				72EE03FA17F5FB8F005E0B62 /* SecondViewController.m in Sources */,
+				720C0317182965FF00AAA98D /* ThirdViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
