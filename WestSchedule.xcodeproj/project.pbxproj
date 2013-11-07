@@ -10,6 +10,7 @@
 		720C0317182965FF00AAA98D /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 720C0316182965FF00AAA98D /* ThirdViewController.m */; };
 		72344E2717FDC2B60084354A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 72344E2617FDC2B60084354A /* Icon.png */; };
 		72344E2917FDC3930084354A /* IconRes.png in Resources */ = {isa = PBXBuildFile; fileRef = 72344E2817FDC3930084354A /* IconRes.png */; };
+		7246EFB7182B3DF0008D90F2 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7246EFB6182B3DF0008D90F2 /* CustomCell.m */; };
 		7255797218271BD9001592F5 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7255797118271BD9001592F5 /* MessageUI.framework */; };
 		7255797418271C00001592F5 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7255797318271C00001592F5 /* MessageUI.framework */; };
 		72EE03D717F5FB8F005E0B62 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72EE03D617F5FB8F005E0B62 /* UIKit.framework */; };
@@ -35,6 +36,8 @@
 		720C0316182965FF00AAA98D /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		72344E2617FDC2B60084354A /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		72344E2817FDC3930084354A /* IconRes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IconRes.png; sourceTree = "<group>"; };
+		7246EFB5182B3DF0008D90F2 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
+		7246EFB6182B3DF0008D90F2 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
 		7255797118271BD9001592F5 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		7255797318271C00001592F5 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		72EE03D317F5FB8F005E0B62 /* WestSchedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WestSchedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +83,8 @@
 		72EE03CA17F5FB8E005E0B62 = {
 			isa = PBXGroup;
 			children = (
+				7246EFB5182B3DF0008D90F2 /* CustomCell.h */,
+				7246EFB6182B3DF0008D90F2 /* CustomCell.m */,
 				7255797118271BD9001592F5 /* MessageUI.framework */,
 				72344E2817FDC3930084354A /* IconRes.png */,
 				72344E2617FDC2B60084354A /* Icon.png */,
@@ -220,6 +225,7 @@
 				72EE03F317F5FB8F005E0B62 /* FirstViewController.m in Sources */,
 				72EE03FA17F5FB8F005E0B62 /* SecondViewController.m in Sources */,
 				720C0317182965FF00AAA98D /* ThirdViewController.m in Sources */,
+				7246EFB7182B3DF0008D90F2 /* CustomCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,12 +7,18 @@
 //
 
 #import "ThirdViewController.h"
+#import "CustomCell.h"
 
-@interface ThirdViewController ()
+@interface ThirdViewController (){
+    
+
+    NSArray *arrayOfClasses;
+}
 
 @end
 
 @implementation ThirdViewController
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,16 +34,45 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    NSDateComponents *dateComponents = [gregorian components:(NSHourCalendarUnit  | NSMinuteCalendarUnit | NSSecondCalendarUnit) fromDate:0];
 
+    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+    [formatter setDateFormat:@"EEE, MMM d"];
+    todaysDate = [formatter stringFromDate:[NSDate date]];
+    Date.text = todaysDate;
     
-/*  NSInteger hour =   [dateComponents hour];
-    NSInteger minute = [dateComponents minute];
-    NSInteger second = [dateComponents second];
- */
-    //[gregorian release];
+    
+    [[self Schedule]setDataSource:self];
+    [[self Schedule]setDelegate:self];
+    arrayOfClasses = [[NSArray alloc] initWithObjects: @"One", @"Two", @"Three", @"Four", @"Five",@"Six",@"Seven",nil];
+    
+    
 }
+
+
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return 1;
+    
+}
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    
+    return 7;
+}
+
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    static NSString *CellIdentifier = @"Cell";
+    CustomCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
+    [[cell ScheduleClass1] setText:[arrayOfClasses objectAtIndex:indexPath.item]];
+    return cell;
+    
+    
+}
+
 
 - (void)didReceiveMemoryWarning
 {

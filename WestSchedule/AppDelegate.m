@@ -7,13 +7,24 @@
 //
 
 #import "AppDelegate.h"
-//#import "ThirdViewController.h"
 
 
 @implementation AppDelegate
+@synthesize all7Classes;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    
+    self.all7Classes = [[NSMutableArray alloc] initWithObjects:
+                        @"Period 1",
+                        @"Period 2",
+                        @"Period 3",
+                        @"Period 4",
+                        @"Period 5",
+                        @"Period 6",
+                        @"Period 7",
+                        nil];
     
     // Override point for customization after application launch.
     return YES;
@@ -23,6 +34,7 @@
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+    
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application

@@ -14,6 +14,7 @@
 
 @implementation FirstViewController
 @synthesize ClassNames;
+@synthesize all7Classes;
 //@synthesize Change1;
 
 
@@ -57,6 +58,16 @@
     
     self.currentClass = 1;
     
+    self.all7Classes = [[NSMutableArray alloc] initWithObjects:
+                        @"Period 1",
+                        @"Period 2",
+                        @"Period 3",
+                        @"Period 4",
+                        @"Period 5",
+                        @"Period 6",
+                        @"Period 7",
+                        nil];
+    
     
     
 }
@@ -85,55 +96,50 @@
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
     
     NSLog(@"Selected Row %d", row);
+    pickerView.hidden = YES;
     
     if (self.currentClass == 1)
     {
-        self.Class1.text = [self.ClassNames objectAtIndex:row];
-        pickerView.hidden = YES;
-        return;
+        self.Class1.text = [self.ClassNames objectAtIndex:row];        
     }
     
-    if (self.currentClass == 2)
+    else if (self.currentClass == 2)
     {
         self.Class2.text = [self.ClassNames objectAtIndex:row];
-        pickerView.hidden = YES;
-        return;
     }
     
-    if (self.currentClass == 3)
+    else if (self.currentClass == 3)
     {
         self.Class3.text = [self.ClassNames objectAtIndex:row];
-        pickerView.hidden = YES;
-        return;
     }
     
-    if (self.currentClass == 4)
+    else if (self.currentClass == 4)
     {
-        self.Class4.text = [self.ClassNames objectAtIndex:row];
-        pickerView.hidden = YES;
-        return;
+        self.Class4.text = [self.ClassNames objectAtIndex:row];   
     }
     
-    if (self.currentClass == 5)
+    else if (self.currentClass == 5)
     {
-        self.Class5.text = [self.ClassNames objectAtIndex:row];
-        pickerView.hidden = YES;
-        return;
+        self.Class5.text = [self.ClassNames objectAtIndex:row];  
     }
     
-    if (self.currentClass == 6)
+    else if (self.currentClass == 6)
     {
-        self.Class6.text = [self.ClassNames objectAtIndex:row];
-        pickerView.hidden = YES;
-        return;
+        self.Class6.text = [self.ClassNames objectAtIndex:row];   
     }
     
-    if (self.currentClass == 7)
+    else if (self.currentClass == 7)
     {
-        self.Class7.text = [self.ClassNames objectAtIndex:row];
-        pickerView.hidden = YES;
-        return;
+        self.Class7.text = [self.ClassNames objectAtIndex:row];  
     }
+    
+    
+    
+    [self.all7Classes replaceObjectAtIndex:row-1 withObject:[self.ClassNames objectAtIndex:row ]];
+    
+    return;
+    
+    
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{

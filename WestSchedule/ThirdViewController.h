@@ -8,9 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ThirdViewController : UIViewController
+@interface ThirdViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate> {
+    
+    IBOutlet UILabel *Date;
+    NSString *todaysDate;
+    
+}
 
-@property (weak, nonatomic) IBOutlet UILabel *Date;
+//@property (weak, nonatomic) IBOutlet UILabel *Date;
+
+
+@property (weak, nonatomic) IBOutlet UICollectionView *Schedule;
+
 
 
 
