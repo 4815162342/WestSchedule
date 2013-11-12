@@ -134,8 +134,7 @@
     }
     
     
-    
-    [self.all7Classes replaceObjectAtIndex:row-1 withObject:[self.ClassNames objectAtIndex:row ]];
+    [self.all7Classes replaceObjectAtIndex:self.currentClass withObject:[self.ClassNames objectAtIndex:row ]];
     
     return;
     
@@ -202,6 +201,7 @@
     self.Class7.text = @"Class 7";
     
 }
+
 
 
 @end
