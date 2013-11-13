@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -364,20 +364,21 @@
                             <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dhl-va-N4X">
                                 <color key="backgroundColor" red="0.29803922772407532" green="0.29803922772407532" blue="0.29803922772407532" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="439" id="L4k-JC-QlF"/>
+                                    <constraint firstAttribute="width" constant="154" id="m3j-lc-iuK"/>
+                                    <constraint firstAttribute="height" constant="334" id="tqr-cd-qdO"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cIM-fZ-UjL">
-                                    <size key="itemSize" width="285" height="90"/>
+                                    <size key="itemSize" width="155" height="70"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="RjK-3a-pBC" customClass="CustomCell">
-                                        <rect key="frame" x="17" y="0.0" width="285" height="90"/>
+                                        <rect key="frame" x="-1" y="0.0" width="155" height="70"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="285" height="90"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="155" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCe-hG-ecl">
@@ -390,12 +391,36 @@
                                         </view>
                                         <color key="backgroundColor" red="0.70196080207824707" green="0.70196080207824707" blue="0.70196080207824707" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstItem="lCe-hG-ecl" firstAttribute="centerX" secondItem="RjK-3a-pBC" secondAttribute="centerX" type="default" id="91N-jV-A1s"/>
-                                            <constraint firstItem="lCe-hG-ecl" firstAttribute="top" secondItem="RjK-3a-pBC" secondAttribute="top" constant="34" id="tUW-74-0aP"/>
+                                            <constraint firstItem="lCe-hG-ecl" firstAttribute="centerX" secondItem="RjK-3a-pBC" secondAttribute="centerX" type="default" id="fSD-ud-KjK"/>
+                                            <constraint firstItem="lCe-hG-ecl" firstAttribute="centerY" secondItem="RjK-3a-pBC" secondAttribute="centerY" type="default" id="sWD-I3-2ks"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="ScheduleClass1" destination="lCe-hG-ecl" id="Jli-xb-lAg"/>
                                         </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cou-Ef-Rk1">
+                                <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="154" id="LVr-so-gxD"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2fn-Hy-OAd">
+                                    <size key="itemSize" width="154" height="70"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="5km-7e-wLy">
+                                        <rect key="frame" x="0.0" y="0.0" width="154" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="154" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -404,10 +429,12 @@
                         <constraints>
                             <constraint firstItem="dhl-va-N4X" firstAttribute="leading" secondItem="V0F-yy-HD9" secondAttribute="leading" type="default" id="1f8-9j-RAJ"/>
                             <constraint firstItem="X1e-xt-wCQ" firstAttribute="leading" secondItem="V0F-yy-HD9" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="2IR-CB-TBT"/>
+                            <constraint firstItem="cou-Ef-Rk1" firstAttribute="trailing" secondItem="V0F-yy-HD9" secondAttribute="trailing" type="default" id="5Pm-LS-4RZ"/>
+                            <constraint firstItem="cou-Ef-Rk1" firstAttribute="top" secondItem="dhl-va-N4X" secondAttribute="top" type="default" id="Hxr-9D-HwA"/>
                             <constraint firstItem="dhl-va-N4X" firstAttribute="bottom" secondItem="V0F-yy-HD9" secondAttribute="bottom" type="default" id="NnE-X1-ldo"/>
-                            <constraint firstItem="dhl-va-N4X" firstAttribute="trailing" secondItem="V0F-yy-HD9" secondAttribute="trailing" type="default" id="OhX-Lm-FQG"/>
                             <constraint firstItem="p17-8h-kFP" firstAttribute="leading" secondItem="X1e-xt-wCQ" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="fGK-hY-24Q"/>
                             <constraint firstItem="p17-8h-kFP" firstAttribute="top" secondItem="V0F-yy-HD9" secondAttribute="top" constant="20" symbolic="YES" type="default" id="rQ0-ou-O1V"/>
+                            <constraint firstItem="cou-Ef-Rk1" firstAttribute="bottom" secondItem="V0F-yy-HD9" secondAttribute="bottom" type="default" id="sBC-78-GPc"/>
                             <constraint firstItem="X1e-xt-wCQ" firstAttribute="top" secondItem="V0F-yy-HD9" secondAttribute="top" constant="20" symbolic="YES" type="default" id="tTa-li-OjV"/>
                         </constraints>
                     </view>
@@ -415,6 +442,7 @@
                     <connections>
                         <outlet property="Date" destination="p17-8h-kFP" id="lHW-t6-IsN"/>
                         <outlet property="Schedule" destination="dhl-va-N4X" id="kBC-ah-FDJ"/>
+                        <outlet property="ScheduleTimes" destination="cou-Ef-Rk1" id="PUg-zO-Ukq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iw3-ta-mL3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -498,6 +526,7 @@
             <relationships>
                 <relationship kind="outlet" name="Date" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="Schedule" candidateClass="UICollectionView"/>
+                <relationship kind="outlet" name="ScheduleTimes" candidateClass="UICollectionView"/>
             </relationships>
         </class>
         <class className="UICollectionReusableView" superclassName="UIView">
@@ -508,6 +537,9 @@
         </class>
         <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
+        </class>
+        <class className="UICollectionViewLayout" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

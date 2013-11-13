@@ -10,11 +10,7 @@
 #import "CustomCell.h"
 #import "CoreData.h"
 
-@interface ThirdViewController (){
-    
-
-    NSArray *arrayOfClasses;
-}
+@interface ThirdViewController ()
 
 @end
 
@@ -44,8 +40,9 @@
     
     [[self Schedule]setDataSource:self];
     [[self Schedule]setDelegate:self];
-    arrayOfClasses = [[NSArray alloc] initWithObjects: @"One", @"Two", @"Three", @"Four", @"Five",@"Six",@"Seven",nil];
     
+    [[self ScheduleTimes]setDataSource:self];
+    [[self ScheduleTimes]setDelegate:self];
     
 }
 
