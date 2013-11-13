@@ -61,8 +61,6 @@
 
 @property (nonatomic, assign) int currentClass;
 
-@property (nonatomic, retain) NSMutableArray *all7Classes;
-
 @end
 
 

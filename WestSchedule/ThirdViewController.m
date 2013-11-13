@@ -8,6 +8,7 @@
 
 #import "ThirdViewController.h"
 #import "CustomCell.h"
+#import "CoreData.h"
 
 @interface ThirdViewController (){
     
@@ -67,7 +68,7 @@
     
     static NSString *CellIdentifier = @"Cell";
     CustomCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
-    [[cell ScheduleClass1] setText:[arrayOfClasses objectAtIndex:indexPath.item]];
+    [[cell ScheduleClass1] setText:[[[CoreData theData] all7Classes]objectAtIndex:indexPath.item]];
     return cell;
     
     

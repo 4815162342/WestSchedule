@@ -7,6 +7,7 @@
 //
 
 #import "FirstViewController.h"
+#import "CoreData.h"
 
 @interface FirstViewController ()
 
@@ -14,8 +15,6 @@
 
 @implementation FirstViewController
 @synthesize ClassNames;
-@synthesize all7Classes;
-//@synthesize Change1;
 
 
 - (void)viewDidLoad
@@ -56,18 +55,7 @@
 
                        nil];
     
-    self.currentClass = 1;
-    
-    self.all7Classes = [[NSMutableArray alloc] initWithObjects:
-                        @"Period 1",
-                        @"Period 2",
-                        @"Period 3",
-                        @"Period 4",
-                        @"Period 5",
-                        @"Period 6",
-                        @"Period 7",
-                        nil];
-    
+    self.currentClass = 0;
     
     
 }
@@ -86,7 +74,7 @@
 }
 
 
-// returns the # of rows in each component..
+// returns the # of rows in each component
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
     
     
@@ -97,44 +85,46 @@
     
     NSLog(@"Selected Row %d", row);
     pickerView.hidden = YES;
-    
-    if (self.currentClass == 1)
+   
+    if (self.currentClass == 0)
     {
         self.Class1.text = [self.ClassNames objectAtIndex:row];        
     }
     
-    else if (self.currentClass == 2)
+    else if (self.currentClass == 1)
     {
         self.Class2.text = [self.ClassNames objectAtIndex:row];
     }
     
-    else if (self.currentClass == 3)
+    else if (self.currentClass == 2)
     {
         self.Class3.text = [self.ClassNames objectAtIndex:row];
     }
     
-    else if (self.currentClass == 4)
+    else if (self.currentClass == 3)
     {
         self.Class4.text = [self.ClassNames objectAtIndex:row];   
     }
     
-    else if (self.currentClass == 5)
+    else if (self.currentClass == 4)
     {
         self.Class5.text = [self.ClassNames objectAtIndex:row];  
     }
     
-    else if (self.currentClass == 6)
+    else if (self.currentClass == 5)
     {
         self.Class6.text = [self.ClassNames objectAtIndex:row];   
     }
     
-    else if (self.currentClass == 7)
+    else if (self.currentClass == 6)
     {
-        self.Class7.text = [self.ClassNames objectAtIndex:row];  
+        
+        self.Class7.text = [self.ClassNames objectAtIndex:row];
+        
     }
     
     
-    [self.all7Classes replaceObjectAtIndex:self.currentClass withObject:[self.ClassNames objectAtIndex:row ]];
+    [[[CoreData theData] all7Classes] replaceObjectAtIndex:self.currentClass withObject:[self.ClassNames objectAtIndex:row ]];
     
     return;
     
@@ -150,44 +140,44 @@
 - (IBAction)Change1:(id)sender {
     
     self.Picker.hidden = NO;
-    self.currentClass = 1;
+    self.currentClass = 0;
 }
 
 
 - (IBAction)Change2:(id)sender {
     
     self.Picker.hidden = NO;
-    self.currentClass = 2;
+    self.currentClass = 1;
 }
 
 - (IBAction)Change3:(id)sender {
     
     self.Picker.hidden = NO;
-    self.currentClass = 3;
+    self.currentClass = 2;
 }
 
 - (IBAction)Change4:(id)sender {
     
     self.Picker.hidden = NO;
-    self.currentClass = 4;
+    self.currentClass = 3;
 }
 
 - (IBAction)Change5:(id)sender {
     
     self.Picker.hidden = NO;
-    self.currentClass = 5;
+    self.currentClass = 4;
 }
 
 - (IBAction)Change6:(id)sender {
     
     self.Picker.hidden = NO;
-    self.currentClass = 6;
+    self.currentClass = 5;
 }
 
 - (IBAction)Change7:(id)sender {
     
     self.Picker.hidden = NO;
-    self.currentClass = 7;
+    self.currentClass = 6;
 }
 
 - (IBAction)ClearAll:(id)sender {
@@ -199,6 +189,11 @@
     self.Class5.text = @"Class 5";
     self.Class6.text = @"Class 6";
     self.Class7.text = @"Class 7";
+    
+    for (int i=0; i<7; i++)
+    {
+        [[[CoreData theData] all7Classes] replaceObjectAtIndex:i withObject:@" "];
+    }
     
 }
 

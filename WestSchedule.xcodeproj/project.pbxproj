@@ -13,6 +13,7 @@
 		7246EFB7182B3DF0008D90F2 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7246EFB6182B3DF0008D90F2 /* CustomCell.m */; };
 		7255797218271BD9001592F5 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7255797118271BD9001592F5 /* MessageUI.framework */; };
 		7255797418271C00001592F5 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7255797318271C00001592F5 /* MessageUI.framework */; };
+		72AB833A18330ECA00B378FD /* CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AB833918330ECA00B378FD /* CoreData.m */; };
 		72EE03D717F5FB8F005E0B62 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72EE03D617F5FB8F005E0B62 /* UIKit.framework */; };
 		72EE03D917F5FB8F005E0B62 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72EE03D817F5FB8F005E0B62 /* Foundation.framework */; };
 		72EE03DB17F5FB8F005E0B62 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72EE03DA17F5FB8F005E0B62 /* CoreGraphics.framework */; };
@@ -40,6 +41,8 @@
 		7246EFB6182B3DF0008D90F2 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
 		7255797118271BD9001592F5 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		7255797318271C00001592F5 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		72AB833818330ECA00B378FD /* CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreData.h; path = WestSchedule/CoreData.h; sourceTree = "<group>"; };
+		72AB833918330ECA00B378FD /* CoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreData.m; path = WestSchedule/CoreData.m; sourceTree = "<group>"; };
 		72EE03D317F5FB8F005E0B62 /* WestSchedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WestSchedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72EE03D617F5FB8F005E0B62 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		72EE03D817F5FB8F005E0B62 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -83,6 +86,8 @@
 		72EE03CA17F5FB8E005E0B62 = {
 			isa = PBXGroup;
 			children = (
+				72AB833818330ECA00B378FD /* CoreData.h */,
+				72AB833918330ECA00B378FD /* CoreData.m */,
 				7246EFB5182B3DF0008D90F2 /* CustomCell.h */,
 				7246EFB6182B3DF0008D90F2 /* CustomCell.m */,
 				7255797118271BD9001592F5 /* MessageUI.framework */,
@@ -226,6 +231,7 @@
 				72EE03FA17F5FB8F005E0B62 /* SecondViewController.m in Sources */,
 				720C0317182965FF00AAA98D /* ThirdViewController.m in Sources */,
 				7246EFB7182B3DF0008D90F2 /* CustomCell.m in Sources */,
+				72AB833A18330ECA00B378FD /* CoreData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

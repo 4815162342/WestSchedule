@@ -15,8 +15,6 @@
     
 }
 
-//@property (weak, nonatomic) IBOutlet UILabel *Date;
-
 
 @property (weak, nonatomic) IBOutlet UICollectionView *Schedule;
 
