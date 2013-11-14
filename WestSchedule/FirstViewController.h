@@ -55,10 +55,6 @@
 - (IBAction)ClearAll:(id)sender;
 
 
-
-//Array of Class names
-@property (strong, nonatomic) NSArray *ClassNames;
-
 @property (nonatomic, assign) int currentClass;
 
 @end

@@ -41,8 +41,12 @@
     [[self Schedule]setDataSource:self];
     [[self Schedule]setDelegate:self];
     
+    /*
     [[self ScheduleTimes]setDataSource:self];
     [[self ScheduleTimes]setDelegate:self];
+     */
+
+    
     
 }
 

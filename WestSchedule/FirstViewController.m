@@ -14,7 +14,6 @@
 @end
 
 @implementation FirstViewController
-@synthesize ClassNames;
 
 
 - (void)viewDidLoad
@@ -23,38 +22,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     self.Picker.hidden = YES;
-    
-    self.ClassNames = [[NSArray alloc] initWithObjects:
-                       @"Geometry",
-                       @"Geometry Honors",
-                       @"Algebra",
-                       @"Algebra Honors",
-                       @"Pre-Calculus",
-                       @"Honors Pre-Calculus",
-                       @"Honors Calculus",
-                       @"Calculus",
-                       @"AP Calculus AB",
-                       @"AP Calculus BC",
-                       
-                       @"Band",
-                       @"Chorus",
-                       @"Orchestra",
-                       @"Ceramics",
-                       @"2D Design",
-                       @"3D Design",
-                       @"Photography",
-                       
-                       
-                       
-                       @"Spanish III Honors",
-                       @"English 9",
-                       @"Physics Honors",
-                       @"Bible OT",
-                       @"Independent Study",
-                       
-
-                       nil];
-    
+        
     self.currentClass = 0;
     
     
@@ -78,7 +46,7 @@
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
     
     
-    return [self.ClassNames count];
+    return [[[CoreData theData] ClassNames] count];
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
@@ -88,43 +56,43 @@
    
     if (self.currentClass == 0)
     {
-        self.Class1.text = [self.ClassNames objectAtIndex:row];        
+        self.Class1.text = [[[CoreData theData] ClassNames] objectAtIndex:row];        
     }
     
     else if (self.currentClass == 1)
     {
-        self.Class2.text = [self.ClassNames objectAtIndex:row];
+        self.Class2.text = [[[CoreData theData] ClassNames] objectAtIndex:row];
     }
     
     else if (self.currentClass == 2)
     {
-        self.Class3.text = [self.ClassNames objectAtIndex:row];
+        self.Class3.text = [[[CoreData theData] ClassNames] objectAtIndex:row];
     }
     
     else if (self.currentClass == 3)
     {
-        self.Class4.text = [self.ClassNames objectAtIndex:row];   
+        self.Class4.text = [[[CoreData theData] ClassNames] objectAtIndex:row];   
     }
     
     else if (self.currentClass == 4)
     {
-        self.Class5.text = [self.ClassNames objectAtIndex:row];  
+        self.Class5.text = [[[CoreData theData] ClassNames] objectAtIndex:row];  
     }
     
     else if (self.currentClass == 5)
     {
-        self.Class6.text = [self.ClassNames objectAtIndex:row];   
+        self.Class6.text = [[[CoreData theData] ClassNames] objectAtIndex:row];   
     }
     
     else if (self.currentClass == 6)
     {
         
-        self.Class7.text = [self.ClassNames objectAtIndex:row];
+        self.Class7.text = [[[CoreData theData] ClassNames] objectAtIndex:row];
         
     }
     
     
-    [[[CoreData theData] all7Classes] replaceObjectAtIndex:self.currentClass withObject:[self.ClassNames objectAtIndex:row ]];
+    [[[CoreData theData] all7Classes] replaceObjectAtIndex:self.currentClass withObject:[[[CoreData theData] ClassNames] objectAtIndex:row ]];
     
     return;
     
@@ -132,7 +100,7 @@
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
-    return [self.ClassNames objectAtIndex:row];
+    return [[[CoreData theData] ClassNames] objectAtIndex:row];
     
 }
 
@@ -189,11 +157,6 @@
     self.Class5.text = @"Class 5";
     self.Class6.text = @"Class 6";
     self.Class7.text = @"Class 7";
-    
-    for (int i=0; i<7; i++)
-    {
-        [[[CoreData theData] all7Classes] replaceObjectAtIndex:i withObject:@" "];
-    }
     
 }
 

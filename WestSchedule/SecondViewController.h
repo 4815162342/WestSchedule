@@ -15,5 +15,7 @@
 
 - (IBAction)Send:(id)sender;
 
+- (IBAction)clearALl:(id)sender;
+
 
 @end

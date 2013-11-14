@@ -7,6 +7,7 @@
 //
 
 #import "SecondViewController.h"
+#import "CoreData.h"
 
 @interface SecondViewController ()
 
@@ -38,6 +39,16 @@
     [self presentViewController:mailController animated:YES completion:nil];
     
 }
+
+
+- (IBAction)clearALl:(id)sender{
+    
+    for (int i=0; i<7; i++)
+    {
+        [[[CoreData theData] all7Classes] replaceObjectAtIndex:i withObject:@" "];
+    }
+}
+
 
 -(void)touchesBegan:(NSSet *) touches withEvent:(UIEvent *)event
 {
