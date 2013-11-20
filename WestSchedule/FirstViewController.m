@@ -148,7 +148,8 @@
     self.currentClass = 6;
 }
 
-- (IBAction)ClearAll:(id)sender {
+/*
+ - (IBAction)ClearAll:(id)sender {
 
     self.Class1.text = @"Class 1";
     self.Class2.text = @"Class 2";
@@ -157,8 +158,8 @@
     self.Class5.text = @"Class 5";
     self.Class6.text = @"Class 6";
     self.Class7.text = @"Class 7";
-    
 }
+  */
 
 
 

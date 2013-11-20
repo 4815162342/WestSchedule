@@ -19,7 +19,7 @@
     IBOutlet UIButton *Change5;
     IBOutlet UIButton *Change6;
     IBOutlet UIButton *Change7;
-    IBOutlet UIButton *ClearAll;
+    //IBOutlet UIButton *ClearAll;
 }
 
 @property (strong, nonatomic) IBOutlet UIPickerView *Picker;
@@ -52,7 +52,7 @@
 
 
 
-- (IBAction)ClearAll:(id)sender;
+//- (IBAction)ClearAll:(id)sender;
 
 
 @property (nonatomic, assign) int currentClass;

@@ -17,7 +17,7 @@
 
 
 @property (weak, nonatomic) IBOutlet UICollectionView *Schedule;
-@property (weak, nonatomic) IBOutlet UICollectionView *ScheduleTimes;
+//@property (weak, nonatomic) IBOutlet UICollectionView *ScheduleTimes;
 
 
 
