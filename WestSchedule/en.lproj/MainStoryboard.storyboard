@@ -322,10 +322,10 @@
                         <constraints>
                             <constraint firstItem="X2n-Fj-397" firstAttribute="top" secondItem="17" secondAttribute="top" constant="20" symbolic="YES" type="default" id="0nU-Pa-heA"/>
                             <constraint firstItem="KtR-6c-88t" firstAttribute="centerX" secondItem="hcJ-R9-gv8" secondAttribute="centerX" type="default" id="C2j-w0-Qz4"/>
+                            <constraint firstAttribute="bottom" secondItem="KtR-6c-88t" secondAttribute="bottom" constant="48" id="Cb2-2Y-bBb"/>
                             <constraint firstItem="hcJ-R9-gv8" firstAttribute="centerX" secondItem="fH6-gP-2VH" secondAttribute="centerX" type="default" id="Lax-0T-D5F"/>
                             <constraint firstItem="X2n-Fj-397" firstAttribute="centerX" secondItem="17" secondAttribute="centerX" type="default" id="T7c-BH-caF"/>
                             <constraint firstItem="X2n-Fj-397" firstAttribute="centerX" secondItem="fH6-gP-2VH" secondAttribute="centerX" type="default" id="TEl-BL-rMf"/>
-                            <constraint firstItem="KtR-6c-88t" firstAttribute="top" secondItem="hcJ-R9-gv8" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="W5U-oR-zVb"/>
                             <constraint firstItem="hcJ-R9-gv8" firstAttribute="top" secondItem="fH6-gP-2VH" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="iHx-9W-imv"/>
                             <constraint firstItem="fH6-gP-2VH" firstAttribute="top" secondItem="X2n-Fj-397" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="lKK-HS-Nul"/>
                         </constraints>

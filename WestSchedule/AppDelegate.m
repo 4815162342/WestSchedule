@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "CoreData.h"
 
 
 @implementation AppDelegate
@@ -14,7 +15,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+
     
+
     
     self.all7Classes = [[NSMutableArray alloc] initWithObjects:
                         @"Period 1",
@@ -58,6 +61,14 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     
     //SAVE THE CLASSES
+    
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:[[CoreData theData] all7Classes] forKey:@"savedArray"];
+    [defaults synchronize];
+    
+    
+    
 }
 
 @end

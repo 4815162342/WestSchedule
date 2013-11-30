@@ -69,16 +69,28 @@
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     
-    return 7;
+    return 4;
 }
 
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     
+    //method is run every time cell is loaded
+    
+    static NSArray *quicky;
+    
+    if ([Date.text isEqualToString:@"Thu, Nov 21"])
+    {
+ //[[CoreData theData] all7Classes]
+        
+    }
+    
+    
     static NSString *CellIdentifier = @"Cell";
     CustomCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
-    [[cell ScheduleClass1] setText:[[[CoreData theData] all7Classes]objectAtIndex:indexPath.item]];
+    [[cell ScheduleClass1] setText:[quicky objectAtIndex:1]];
+    //for all items:    indexPath.item
     return cell;
     
     
