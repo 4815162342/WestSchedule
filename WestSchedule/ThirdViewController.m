@@ -78,18 +78,22 @@
     
     //method is run every time cell is loaded
     
-    static NSArray *quicky;
+    static NSMutableArray *quicky;
     
-    if ([Date.text isEqualToString:@"Thu, Nov 21"])
+    //[quicky removeAllObjects];
+    
+    if ([Date.text isEqualToString:@"Mon, Dec 2"])
     {
- //[[CoreData theData] all7Classes]
+        //[quicky removeAllObjects];
+        [quicky addObject:[[[CoreData theData] all7Classes] objectAtIndex:1]];
+        //[[CoreData theData] all7Classes]
         
     }
     
     
     static NSString *CellIdentifier = @"Cell";
     CustomCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
-    [[cell ScheduleClass1] setText:[quicky objectAtIndex:1]];
+    [[cell ScheduleClass1] setText: [quicky objectAtIndex:indexPath.item]];
     //for all items:    indexPath.item
     return cell;
     
