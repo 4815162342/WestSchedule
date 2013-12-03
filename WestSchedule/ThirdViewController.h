@@ -15,7 +15,7 @@
     
 }
 
-
+@property (strong, nonatomic) NSMutableArray *tempClasses;
 @property (weak, nonatomic) IBOutlet UICollectionView *Schedule;
 //@property (weak, nonatomic) IBOutlet UICollectionView *ScheduleTimes;
 
