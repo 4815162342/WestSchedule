@@ -16,7 +16,7 @@
 
 
 
-
+/*
 @property (weak, nonatomic) IBOutlet UILabel *Class1;
 
 @property (weak, nonatomic) IBOutlet UILabel *Class2;
@@ -30,6 +30,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *Class6;
 
 @property (weak, nonatomic) IBOutlet UILabel *Class7;
+ 
+*/
 
 
 

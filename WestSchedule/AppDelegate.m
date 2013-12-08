@@ -15,10 +15,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-
-    
-
-    
     self.all7Classes = [[NSMutableArray alloc] initWithObjects:
                         @"Period 1",
                         @"Period 2",

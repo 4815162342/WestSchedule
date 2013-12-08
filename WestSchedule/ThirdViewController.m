@@ -42,7 +42,7 @@
     [[self Schedule]setDelegate:self];
     
     
-    _tempClasses = [[NSMutableArray alloc] initWithObjects:@"Class 1", @"Class 2", @"Class 3", @"Class 4", @"Assembly",nil];
+    _tempClasses = [[NSMutableArray alloc] initWithObjects: @"Class 1", @"Class 2", @"Class 3", @"Class 4", @"Assembly",nil];
     
     /*
     [[self ScheduleTimes]setDataSource:self];
@@ -57,22 +57,30 @@
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.Schedule reloadData];
+
+    /*
+    if ([_tempClasses count] > 5)
+        [_tempClasses removeObjectsAtIndexes:[NSIndexSet indexSetWithIndexesInRange: NSMakeRange(5, [_tempClasses count]-1)]];
+    */
     
-    [_tempClasses removeAllObjects];
     
-    _tempClasses = [self dateParse:1];
+    [_tempClasses replaceObjectsInRange: NSMakeRange(0, 4) withObjectsFromArray:[self dateParse:6]];
     
-    if ([Date.text hasPrefix:@"Mon"] || [Date.text hasPrefix:@"Tues"])
-        [_tempClasses insertObject:@"PL/Arts" atIndex:3];
     
-    else if ([Date.text hasPrefix:@"Wed"])
+        
+    if ([Date.text hasPrefix:@"Wed"])
         [_tempClasses insertObject:@"Late Arrival" atIndex:0];
 
-    else if ([Date.text hasPrefix:@"Thurs"])
+    else if ([Date.text hasPrefix:@"Thu"])
         [_tempClasses insertObject:@"Assembly" atIndex:1];
 
     else if ([Date.text hasPrefix:@"Fri"])
-        [_tempClasses insertObject:@"Early Dismissal" atIndex:4];
+        [_tempClasses addObject:@"Early Dismissal"];
+    
+    else
+        [_tempClasses insertObject:@"PL/Arts" atIndex:3];
+    
+    NSLog(@"%@", _tempClasses);
 
 }
 
@@ -98,6 +106,7 @@
         
     static NSString *CellIdentifier = @"Cell";
     CustomCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
+    
     [[cell ScheduleClass1] setText: [_tempClasses objectAtIndex:indexPath.item]];
     //for all items:    indexPath.item
     return cell;
@@ -115,49 +124,49 @@
 
 - (NSMutableArray *) dateParse:(int)day
 {
-    static NSMutableArray *tempClasses;
+    NSMutableArray *tempClasses = [[NSMutableArray alloc] initWithObjects:@"Test1", @"Test2", @"Test3", @"Test4", nil];
     
     switch (day)
     {
         case 0:
-            tempClasses = [[NSMutableArray alloc] initWithObjects:[[[CoreData theData] all7Classes] subarrayWithRange:NSMakeRange(0, 3)], nil];
+            [tempClasses replaceObjectsInRange:NSMakeRange(0, 4) withObjectsFromArray:[[[CoreData theData] all7Classes] subarrayWithRange:NSMakeRange(0, 4)]];
             break;
             
         case 1:
-            
-            tempClasses = [[NSMutableArray alloc] initWithObjects:[[[CoreData theData] all7Classes] subarrayWithRange:NSMakeRange(4, 6)], [[[CoreData theData] all7Classes] objectAtIndex: 0], nil];
+            [tempClasses replaceObjectsInRange:NSMakeRange(0, 3) withObjectsFromArray:[[[CoreData theData] all7Classes] subarrayWithRange:NSMakeRange(4, 3)]];
+            [tempClasses replaceObjectAtIndex:3 withObject: [[[CoreData theData] all7Classes] objectAtIndex: 0]];
             break;
             
         case 2:
-            tempClasses = [[NSMutableArray alloc] initWithObjects:[[[CoreData theData] all7Classes] subarrayWithRange:NSMakeRange(1, 4)],nil];
+            [tempClasses replaceObjectsInRange:NSMakeRange(0, 4) withObjectsFromArray:[[[CoreData theData] all7Classes] subarrayWithRange:NSMakeRange(1, 4)]];
             break;
             
         case 3:
-            tempClasses = [[NSMutableArray alloc] initWithObjects:[[[CoreData theData] all7Classes] subarrayWithRange:NSMakeRange(5, 6)], [[[CoreData theData] all7Classes] subarrayWithRange:NSMakeRange(0, 1)],nil];
+            [tempClasses replaceObjectsInRange:NSMakeRange(0, 2) withObjectsFromArray:[[[CoreData theData] all7Classes] subarrayWithRange:NSMakeRange(5, 2)]];
+            [tempClasses replaceObjectsInRange:NSMakeRange(2, 2) withObjectsFromArray:[[[CoreData theData] all7Classes] subarrayWithRange:NSMakeRange(0, 2)]];
             break;
             
         case 4:
-            tempClasses = [[NSMutableArray alloc] initWithObjects:[[[CoreData theData] all7Classes] subarrayWithRange:NSMakeRange(2, 5)], nil];
+            [tempClasses replaceObjectsInRange:NSMakeRange(0, 4) withObjectsFromArray:[[[CoreData theData] all7Classes] subarrayWithRange:NSMakeRange(2, 4)]];
             break;
             
         case 5:
-            tempClasses = [[NSMutableArray alloc] initWithObjects:[[[CoreData theData] all7Classes] objectAtIndex:6], [[[CoreData theData] all7Classes] subarrayWithRange:NSMakeRange(0, 2)], nil];
+            [tempClasses replaceObjectAtIndex:0 withObject: [[[CoreData theData] all7Classes] objectAtIndex: 6]];
+            [tempClasses replaceObjectsInRange:NSMakeRange(1, 3) withObjectsFromArray:[[[CoreData theData] all7Classes] subarrayWithRange:NSMakeRange(0, 3)]];
             break;
             
         case 6:
-            tempClasses = [[NSMutableArray alloc] initWithObjects:[[[CoreData theData] all7Classes] subarrayWithRange:NSMakeRange(3, 6)], nil];
+            [tempClasses replaceObjectsInRange:NSMakeRange(0, 4) withObjectsFromArray:[[[CoreData theData] all7Classes] subarrayWithRange:NSMakeRange(3, 4)]];
             break;
             
             
         default:
-            tempClasses = [[NSMutableArray alloc] initWithObjects:[[[CoreData theData] all7Classes] subarrayWithRange:NSMakeRange(0, 3)], nil];
+            [tempClasses replaceObjectsInRange:NSMakeRange(0, 4) withObjectsFromArray:[[[CoreData theData] all7Classes] subarrayWithRange:NSMakeRange(0, 4)]];
             break;
             
     }
-    
     return tempClasses;
 }
-
 
 
 @end
