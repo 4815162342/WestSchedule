@@ -26,8 +26,6 @@
 @property (strong, nonatomic) NSArray *otherCourses;
 
 
-
-
 /*
 @property (weak, nonatomic) IBOutlet UILabel *Class1;
 
@@ -42,7 +40,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *Class6;
 
 @property (weak, nonatomic) IBOutlet UILabel *Class7;
- 
 */
 
 

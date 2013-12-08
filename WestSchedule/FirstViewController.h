@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController <UIPickerViewDataSource,UIPickerViewDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface FirstViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 {
     //IBOutlet UILabel *mylabel;
@@ -22,7 +22,6 @@
     //IBOutlet UIButton *ClearAll;
 }
 
-@property (strong, nonatomic) IBOutlet UIPickerView *Picker;
 @property (strong, nonatomic) IBOutlet UITableView *tablePicker;
 
 
@@ -37,7 +36,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *Class3;
 - (IBAction)Change3:(id)sender;
-
 
 @property (weak, nonatomic) IBOutlet UILabel *Class4;
 - (IBAction)Change4:(id)sender;

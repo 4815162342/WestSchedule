@@ -21,7 +21,6 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    self.Picker.hidden = YES;
     self.tablePicker.hidden = YES;
         
     self.currentClass = 0;
@@ -36,74 +35,92 @@
 }
 
 
-// returns the number of 'columns' to display.
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
-    return 1;
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.tablePicker.hidden=YES;
     
-}
-
-
-// returns the # of rows in each component
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
+    switch (indexPath.section)
+    {
+            
+        case 0:
+            [[[CoreData theData] all7Classes] replaceObjectAtIndex:self.currentClass withObject:[[[CoreData theData] mathCourses] objectAtIndex:indexPath.row]];
+                break;
+        case 1:
+            [[[CoreData theData] all7Classes] replaceObjectAtIndex:self.currentClass withObject:[[[CoreData theData] scienceCourses] objectAtIndex:indexPath.row]];
+            break;
+        case 2:
+            [[[CoreData theData] all7Classes] replaceObjectAtIndex:self.currentClass withObject:[[[CoreData theData] englishCourses] objectAtIndex:indexPath.row]];
+            break;
+        case 3:
+            [[[CoreData theData] all7Classes] replaceObjectAtIndex:self.currentClass withObject:[[[CoreData theData] spanishCourses] objectAtIndex:indexPath.row]];
+            break;
+        case 4:
+            [[[CoreData theData] all7Classes] replaceObjectAtIndex:self.currentClass withObject:[[[CoreData theData] frenchCourses] objectAtIndex:indexPath.row]];
+            break;
+        case 5:
+            [[[CoreData theData] all7Classes] replaceObjectAtIndex:self.currentClass withObject:[[[CoreData theData] latinCourses] objectAtIndex:indexPath.row]];
+            break;
+        case 6:
+            [[[CoreData theData] all7Classes] replaceObjectAtIndex:self.currentClass withObject:[[[CoreData theData] chineseCourses] objectAtIndex:indexPath.row]];
+            break;
+        case 7:
+            [[[CoreData theData] all7Classes] replaceObjectAtIndex:self.currentClass withObject:[[[CoreData theData] historyCourses] objectAtIndex:indexPath.row]];
+            break;
+        case 8:
+            [[[CoreData theData] all7Classes] replaceObjectAtIndex:self.currentClass withObject:[[[CoreData theData] artCourses] objectAtIndex:indexPath.row]];
+            break;
+        case 9:
+            [[[CoreData theData] all7Classes] replaceObjectAtIndex:self.currentClass withObject:[[[CoreData theData] otherCourses] objectAtIndex:indexPath.row]];
+            break;
+        default:
+            [[[CoreData theData] all7Classes] replaceObjectAtIndex:self.currentClass withObject:[[[CoreData theData] mathCourses] objectAtIndex:indexPath.row]];
+            break;
+    }
     
-    
-    return [[[CoreData theData] ClassNames] count];
-}
-
-- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
-    
-    NSLog(@"Selected Row %d", row);
-    pickerView.hidden = YES;
-   
     if (self.currentClass == 0)
     {
-        self.Class1.text = [[[CoreData theData] ClassNames] objectAtIndex:row];        
+        self.Class1.text = [[[CoreData theData] all7Classes] objectAtIndex:self.currentClass];
     }
     
     else if (self.currentClass == 1)
     {
-        self.Class2.text = [[[CoreData theData] ClassNames] objectAtIndex:row];
+        self.Class2.text = [[[CoreData theData] all7Classes] objectAtIndex:self.currentClass];
     }
     
     else if (self.currentClass == 2)
     {
-        self.Class3.text = [[[CoreData theData] ClassNames] objectAtIndex:row];
+        self.Class3.text = [[[CoreData theData] all7Classes] objectAtIndex:self.currentClass];
     }
     
     else if (self.currentClass == 3)
     {
-        self.Class4.text = [[[CoreData theData] ClassNames] objectAtIndex:row];   
+        self.Class4.text = [[[CoreData theData] all7Classes] objectAtIndex:self.currentClass];
     }
     
     else if (self.currentClass == 4)
     {
-        self.Class5.text = [[[CoreData theData] ClassNames] objectAtIndex:row];  
+        self.Class5.text = [[[CoreData theData] all7Classes] objectAtIndex:self.currentClass];
     }
     
     else if (self.currentClass == 5)
     {
-        self.Class6.text = [[[CoreData theData] ClassNames] objectAtIndex:row];   
+        self.Class6.text = [[[CoreData theData] all7Classes] objectAtIndex:self.currentClass];
     }
     
     else if (self.currentClass == 6)
     {
         
-        self.Class7.text = [[[CoreData theData] ClassNames] objectAtIndex:row];
+        self.Class7.text = [[[CoreData theData] all7Classes] objectAtIndex:self.currentClass];
         
     }
-    
-    
-    [[[CoreData theData] all7Classes] replaceObjectAtIndex:self.currentClass withObject:[[[CoreData theData] ClassNames] objectAtIndex:row ]];
     
     return;
     
     
-}
 
-- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
-    return [[[CoreData theData] ClassNames] objectAtIndex:row];
     
 }
+
 
 
 - (IBAction)Change1:(id)sender {
@@ -232,7 +249,6 @@
             return 0;
     }
 }
-
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:  (NSIndexPath *)indexPath

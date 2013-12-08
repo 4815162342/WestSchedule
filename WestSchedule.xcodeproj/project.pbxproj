@@ -12,7 +12,6 @@
 		72344E2917FDC3930084354A /* IconRes.png in Resources */ = {isa = PBXBuildFile; fileRef = 72344E2817FDC3930084354A /* IconRes.png */; };
 		7246EFB7182B3DF0008D90F2 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7246EFB6182B3DF0008D90F2 /* CustomCell.m */; };
 		7255797218271BD9001592F5 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7255797118271BD9001592F5 /* MessageUI.framework */; };
-		7255797418271C00001592F5 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7255797318271C00001592F5 /* MessageUI.framework */; };
 		72AB833A18330ECA00B378FD /* CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AB833918330ECA00B378FD /* CoreData.m */; };
 		72EE03D717F5FB8F005E0B62 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72EE03D617F5FB8F005E0B62 /* UIKit.framework */; };
 		72EE03D917F5FB8F005E0B62 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72EE03D817F5FB8F005E0B62 /* Foundation.framework */; };
@@ -76,7 +75,6 @@
 				72EE03D717F5FB8F005E0B62 /* UIKit.framework in Frameworks */,
 				72EE03D917F5FB8F005E0B62 /* Foundation.framework in Frameworks */,
 				72EE03DB17F5FB8F005E0B62 /* CoreGraphics.framework in Frameworks */,
-				7255797418271C00001592F5 /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,7 +177,7 @@
 		72EE03CB17F5FB8E005E0B62 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Adam Sanders";
 			};
 			buildConfigurationList = 72EE03CE17F5FB8E005E0B62 /* Build configuration list for PBXProject "WestSchedule" */;
