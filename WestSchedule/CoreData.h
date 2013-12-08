@@ -14,6 +14,18 @@
 @property (nonatomic, strong) NSMutableArray *all7Classes;
 @property (strong, nonatomic) NSArray *ClassNames;
 
+@property (strong, nonatomic) NSArray *mathCourses;
+@property (strong, nonatomic) NSArray *scienceCourses;
+@property (strong, nonatomic) NSArray *englishCourses;
+@property (strong, nonatomic) NSArray *spanishCourses;
+@property (strong, nonatomic) NSArray *frenchCourses;
+@property (strong, nonatomic) NSArray *latinCourses;
+@property (strong, nonatomic) NSArray *chineseCourses;
+@property (strong, nonatomic) NSArray *historyCourses;
+@property (strong, nonatomic) NSArray *artCourses;
+@property (strong, nonatomic) NSArray *otherCourses;
+
+
 
 
 /*

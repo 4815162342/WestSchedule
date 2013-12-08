@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -184,15 +184,49 @@
                                             <outlet property="delegate" destination="2" id="a4Y-qd-Aoj"/>
                                         </connections>
                                     </pickerView>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="u62-uB-E5X">
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="320" id="T0E-1H-bNQ"/>
+                                            <constraint firstAttribute="height" constant="411" id="eoi-96-Hxv"/>
+                                        </constraints>
+                                        <color key="separatorColor" red="0.036265060262445914" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <prototypes>
+                                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="allClasses" textLabel="5cZ-ax-OJi" style="IBUITableViewCellStyleDefault" id="pXM-9n-N0a">
+                                                <rect key="frame" x="0.0" y="46" width="320" height="46"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                    <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5cZ-ax-OJi">
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="2" id="0Gy-L6-xg0"/>
+                                            <outlet property="delegate" destination="2" id="d2g-ff-5Vn"/>
+                                        </connections>
+                                    </tableView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="u62-uB-E5X" firstAttribute="leading" secondItem="rRW-HA-mXF" secondAttribute="leading" type="default" id="0Sf-RU-d6q"/>
                                     <constraint firstItem="OuJ-5r-pK6" firstAttribute="baseline" secondItem="Dgt-qD-MUD" secondAttribute="baseline" type="default" id="1jr-xT-Uph"/>
+                                    <constraint firstItem="u62-uB-E5X" firstAttribute="top" secondItem="rRW-HA-mXF" secondAttribute="top" constant="11" id="5Bt-34-RpO"/>
                                     <constraint firstItem="lt8-pq-lIX" firstAttribute="baseline" secondItem="n6M-ly-YbT" secondAttribute="baseline" type="default" id="6Hf-kE-NSb"/>
                                     <constraint firstItem="Nik-O2-LXv" firstAttribute="trailing" secondItem="rRW-HA-mXF" secondAttribute="trailing" type="default" id="8Zl-LE-Kno"/>
                                     <constraint firstItem="uNc-q0-KJw" firstAttribute="leading" secondItem="9my-QB-XFY" secondAttribute="leading" type="default" id="9Wi-yS-5z8"/>
                                     <constraint firstItem="MzJ-ek-zqb" firstAttribute="leading" secondItem="rRW-HA-mXF" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="B0b-1A-8va"/>
                                     <constraint firstItem="E1o-iu-lsH" firstAttribute="leading" secondItem="lt8-pq-lIX" secondAttribute="leading" type="default" id="BJ7-hO-0Vw"/>
+                                    <constraint firstItem="Paq-dq-ZwE" firstAttribute="top" secondItem="rRW-HA-mXF" secondAttribute="top" constant="200" id="CZN-sG-ZYJ"/>
                                     <constraint firstItem="iKX-tP-7FN" firstAttribute="leading" secondItem="uNc-q0-KJw" secondAttribute="leading" type="default" id="CeC-FQ-QI9"/>
+                                    <constraint firstItem="u62-uB-E5X" firstAttribute="bottom" secondItem="rRW-HA-mXF" secondAttribute="bottom" type="default" id="Dx4-Ne-p0J"/>
                                     <constraint firstItem="2iC-i7-DvQ" firstAttribute="leading" secondItem="rRW-HA-mXF" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Erx-0f-h9c"/>
                                     <constraint firstItem="I1G-RT-SOy" firstAttribute="baseline" secondItem="lxz-tG-nli" secondAttribute="baseline" type="default" id="HeH-5z-d9X"/>
                                     <constraint firstItem="Nik-O2-LXv" firstAttribute="leading" secondItem="rRW-HA-mXF" secondAttribute="leading" type="default" id="JlU-Md-7VM"/>
@@ -222,11 +256,9 @@
                                     <constraint firstItem="KFc-sG-Snv" firstAttribute="leading" secondItem="2iC-i7-DvQ" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="eYs-3T-sBd"/>
                                     <constraint firstItem="dbR-hk-Iq2" firstAttribute="centerX" secondItem="OuJ-5r-pK6" secondAttribute="centerX" type="user" id="fDG-6W-MUh"/>
                                     <constraint firstItem="RzG-0G-gf8" firstAttribute="leading" secondItem="rRW-HA-mXF" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="fLE-uI-5Ss"/>
-                                    <constraint firstItem="DFt-N5-eUd" firstAttribute="top" secondItem="rRW-HA-mXF" secondAttribute="top" constant="155" id="hI9-wp-4MM"/>
                                     <constraint firstItem="iKX-tP-7FN" firstAttribute="baseline" secondItem="Paq-dq-ZwE" secondAttribute="baseline" type="default" id="jPR-gg-ub0"/>
                                     <constraint firstItem="n6M-ly-YbT" firstAttribute="leading" secondItem="RzG-0G-gf8" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="kDl-g5-Ze5"/>
                                     <constraint firstItem="I1G-RT-SOy" firstAttribute="top" secondItem="rRW-HA-mXF" secondAttribute="top" constant="65" id="lSc-1b-b2r"/>
-                                    <constraint firstItem="Paq-dq-ZwE" firstAttribute="top" secondItem="rRW-HA-mXF" secondAttribute="top" constant="200" id="lTC-og-wzD"/>
                                     <constraint firstItem="dbR-hk-Iq2" firstAttribute="top" secondItem="rRW-HA-mXF" secondAttribute="top" constant="110" id="qZh-t6-MDt"/>
                                     <constraint firstItem="n6M-ly-YbT" firstAttribute="baseline" secondItem="RzG-0G-gf8" secondAttribute="baseline" type="default" id="rv8-O7-UTI"/>
                                     <constraint firstItem="lxz-tG-nli" firstAttribute="leading" secondItem="rRW-HA-mXF" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="sOc-hD-gvF"/>
@@ -260,6 +292,7 @@
                         <outlet property="Class6" destination="lt8-pq-lIX" id="ybf-by-jem"/>
                         <outlet property="Class7" destination="E1o-iu-lsH" id="6C2-LE-DkP"/>
                         <outlet property="Picker" destination="Nik-O2-LXv" id="7Di-aR-KSy"/>
+                        <outlet property="tablePicker" destination="u62-uB-E5X" id="1lt-nD-qfh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
@@ -475,6 +508,7 @@
                 <relationship kind="outlet" name="Class6" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="Class7" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="Picker" candidateClass="UIPickerView"/>
+                <relationship kind="outlet" name="tablePicker" candidateClass="UITableView"/>
             </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">

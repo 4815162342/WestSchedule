@@ -47,17 +47,6 @@
                         nil];
         
         _ClassNames = [[NSArray alloc] initWithObjects:
-                       @"Geometry",
-                       @"Geometry Honors",
-                       @"Algebra",
-                       @"Algebra Honors",
-                       @"Pre-Calculus",
-                       @"Honors Pre-Calculus",
-                       @"Honors Calculus",
-                       @"Calculus",
-                       @"AP Calculus AB",
-                       @"AP Calculus BC",
-                       
                        @"Band",
                        @"Chorus",
                        @"Orchestra",
@@ -66,17 +55,152 @@
                        @"3D Design",
                        @"Photography",
                        
-                       
-                       
                        @"Spanish III Honors",
-                       @"English 9",
-                       @"Physics Honors",
                        @"Bible OT",
                        @"Independent Study",
-                       
-                       
                        nil];
         
+        _mathCourses = [[NSArray alloc] initWithObjects:
+                        @"Geometry",
+                        @"Geometry Honors",
+                        @"Algebra II",
+                        @"Algebra II Honors",
+                        @"Pre-Calculus",
+                        @"Honors Pre-Calculus",
+                        @"Honors Calculus",
+                        @"Calculus",
+                        @"AP Calculus AB",
+                        @"AP Calculus BC",
+                        @"Statistics",
+                        @"Statistics AP",
+                        @"Multivariable Calculus",
+                        nil];
+        
+        _scienceCourses = [[NSArray alloc] initWithObjects:
+                           
+                        @"Physics",
+                        @"Physics Honors",
+                        @"Chemistry",
+                        @"Chemistry Honors",
+                        @"Chemistry AP",
+                        @"Biology",
+                        @"Biology Honors",
+                        @"Biology AP",
+                        @"Physics AP: C",
+                        @"Physics AP: E&M",
+                        @"Environmental Science AP",
+                        @"Neuropsychology",
+                        @"Anatomy",
+                        nil];
+        
+        _englishCourses = [[NSArray alloc] initWithObjects:
+                           
+                        @"English 9",
+                        @"English 10",
+                        @"English 11",
+                        @"English 12",
+                           nil];
+        
+        _spanishCourses = [[NSArray alloc] initWithObjects:
+                            
+                        @"Spanish I",
+                        @"Spanish II",
+                        @"Spanish II Honors",
+                        @"Spanish III",
+                        @"Spanish III Honors",
+                        @"Spanish IV",
+                        @"Spanish V",
+                        @"Spanish VI",
+                        @"Spanish VI Honors",
+                        @"Spanish AP Language",
+                        @"Spanish AP Literature",
+                        nil];
+        
+        _frenchCourses = [[NSArray alloc] initWithObjects:
+                          
+                        @"French I",
+                        @"French II",
+                        @"French III",
+                        @"French III Honors",
+                        @"French IV",
+                        @"French IV Honors",
+                        @"French V",
+                        @"French VI",
+                        @"French VI Honors",
+                        @"French VI Honors A",
+                        @"French VI Honors B",
+                        @"French AP Language",
+                        nil];
+        
+        _latinCourses = [[NSArray alloc] initWithObjects:
+                         
+                         @"Latin I",
+                         @"Latin II",
+                         @"Latin III",
+                         @"Latin III Honors",
+                         @"Latin IV",
+                         @"Latin IV Honors",
+                         @"Latin V",
+                         @"Latin AP",
+                         nil];
+        
+        _chineseCourses = [[NSArray alloc] initWithObjects:
+                           
+                           @"Chinese I",
+                           @"Chinese II",
+                           @"Chinese III",
+                           @"Chinese III Honors",
+                           @"Chinese IV",
+                           @"Chinese IV Honors",
+                           @"Chinese V",
+                           @"Chinese AP",
+                           nil];
+        
+        _historyCourses = [[NSArray alloc] initWithObjects:
+                           
+                           @"Intro to History",
+                           @"History of the Ancient World",
+                           @"History of the Modern World",
+                           @"European History AP",
+                           @"American History",
+                           @"American History AP",
+                           nil];
+        
+        _artCourses = [[NSArray alloc] initWithObjects:
+                       
+                       @"Chorus",
+                       @"Band",
+                       @"Orchestra",
+                       @"Theatre Arts",
+                       @"Music Theory AP",
+                       @"Dance",
+                       @"Ceramics I",
+                       @"Ceramics II",
+                       @"Drawing and Painting I",
+                       @"Drawing and Painting II",
+                       @"Sculpture I",
+                       @"Sculpture II",
+                       @"Portfolio",
+                       @"Portfolio 3D",
+                       @"Photography I",
+                       @"Photography II",
+                       @"AP Studio Art: Drawing",
+                       @"AP Studio Art: 2D Design",
+                       @"AP Studio Art: 3D Design",
+                       nil];
+        
+        _otherCourses = [[NSArray alloc] initWithObjects:
+                         
+                        @"Free Period",
+                        @"Bible",
+                        @"Coding Design",
+                        @"Honors Computer Programming",
+                        @"Creative Programming",
+                        @"AP Computer Science",
+                        @"Independent Study",
+                        @"P.E.",
+                        @"Peer Leadership",
+                        nil];
 
         
         
