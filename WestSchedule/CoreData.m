@@ -45,20 +45,15 @@
                         @"Period 6",
                         @"Period 7",
                         nil];
-        
-        _ClassNames = [[NSArray alloc] initWithObjects:
-                       @"Band",
-                       @"Chorus",
-                       @"Orchestra",
-                       @"Ceramics",
-                       @"2D Design",
-                       @"3D Design",
-                       @"Photography",
-                       
-                       @"Spanish III Honors",
-                       @"Bible OT",
-                       @"Independent Study",
-                       nil];
+        _timeArray = [[NSMutableArray alloc] initWithObjects:
+                      
+                      @"8:30-9:40",
+                      @"9:55-11:05",
+                      @"11:05-1:10",
+                      @"1:10-1:45",
+                      @"1:50-3:00",
+                      
+                      nil];
         
         _mathCourses = [[NSArray alloc] initWithObjects:
                         @"Geometry",

@@ -11,12 +11,16 @@
 @interface ThirdViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate> {
     
     IBOutlet UILabel *Date;
+    IBOutlet UILabel *scheduleDate;
     NSString *todaysDate;
     
 }
 
 @property (strong, nonatomic) NSMutableArray *tempClasses;
 @property (weak, nonatomic) IBOutlet UICollectionView *Schedule;
+@property (weak, nonatomic) IBOutlet UICollectionView *timeView;
+
+
 //@property (weak, nonatomic) IBOutlet UICollectionView *ScheduleTimes;
 
 - (NSMutableArray *) dateParse:(int)day;

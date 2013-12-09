@@ -12,6 +12,7 @@
 		72344E2917FDC3930084354A /* IconRes.png in Resources */ = {isa = PBXBuildFile; fileRef = 72344E2817FDC3930084354A /* IconRes.png */; };
 		7246EFB7182B3DF0008D90F2 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7246EFB6182B3DF0008D90F2 /* CustomCell.m */; };
 		7255797218271BD9001592F5 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7255797118271BD9001592F5 /* MessageUI.framework */; };
+		72A54A0E18558D080026A61E /* TimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A54A0D18558D080026A61E /* TimeView.m */; };
 		72AB833A18330ECA00B378FD /* CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AB833918330ECA00B378FD /* CoreData.m */; };
 		72EE03D717F5FB8F005E0B62 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72EE03D617F5FB8F005E0B62 /* UIKit.framework */; };
 		72EE03D917F5FB8F005E0B62 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72EE03D817F5FB8F005E0B62 /* Foundation.framework */; };
@@ -40,6 +41,8 @@
 		7246EFB6182B3DF0008D90F2 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
 		7255797118271BD9001592F5 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		7255797318271C00001592F5 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		72A54A0C18558CAC0026A61E /* TimeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeView.h; sourceTree = "<group>"; };
+		72A54A0D18558D080026A61E /* TimeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimeView.m; path = WestSchedule/TimeView.m; sourceTree = "<group>"; };
 		72AB833818330ECA00B378FD /* CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreData.h; path = WestSchedule/CoreData.h; sourceTree = "<group>"; };
 		72AB833918330ECA00B378FD /* CoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreData.m; path = WestSchedule/CoreData.m; sourceTree = "<group>"; };
 		72EE03D317F5FB8F005E0B62 /* WestSchedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WestSchedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +87,8 @@
 		72EE03CA17F5FB8E005E0B62 = {
 			isa = PBXGroup;
 			children = (
+				72A54A0C18558CAC0026A61E /* TimeView.h */,
+				72A54A0D18558D080026A61E /* TimeView.m */,
 				72AB833818330ECA00B378FD /* CoreData.h */,
 				72AB833918330ECA00B378FD /* CoreData.m */,
 				7246EFB5182B3DF0008D90F2 /* CustomCell.h */,
@@ -230,6 +235,7 @@
 				720C0317182965FF00AAA98D /* ThirdViewController.m in Sources */,
 				7246EFB7182B3DF0008D90F2 /* CustomCell.m in Sources */,
 				72AB833A18330ECA00B378FD /* CoreData.m in Sources */,
+				72A54A0E18558D080026A61E /* TimeView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,7 +11,6 @@
 @interface FirstViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 {
-    //IBOutlet UILabel *mylabel;
     IBOutlet UIButton *Change1;
     IBOutlet UIButton *Change2;
     IBOutlet UIButton *Change3;
@@ -19,7 +18,6 @@
     IBOutlet UIButton *Change5;
     IBOutlet UIButton *Change6;
     IBOutlet UIButton *Change7;
-    //IBOutlet UIButton *ClearAll;
 }
 
 @property (strong, nonatomic) IBOutlet UITableView *tablePicker;

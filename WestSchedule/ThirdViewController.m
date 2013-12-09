@@ -9,6 +9,7 @@
 #import "ThirdViewController.h"
 #import "CustomCell.h"
 #import "CoreData.h"
+#import "TimeView.h"
 
 @interface ThirdViewController ()
 
@@ -32,23 +33,48 @@
 	// Do any additional setup after loading the view.
     
 
-    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"EEE, MMM d"];
     todaysDate = [formatter stringFromDate:[NSDate date]];
     Date.text = todaysDate;
+    
+    int i=0;
+    switch (i)
+    {
+        case 0:
+            scheduleDate.text = @"A Day";
+            break;
+        case 1:
+            scheduleDate.text = @"B Day";
+            break;
+        case 2:
+            scheduleDate.text = @"C Day";
+            break;
+        case 3:
+            scheduleDate.text = @"D Day";
+            break;
+        case 4:
+            scheduleDate.text = @"E Day";
+            break;
+        case 5:
+            scheduleDate.text = @"F Day";
+            break;
+        case 6:
+            scheduleDate.text = @"G Day";
+            break;
+        default:
+            scheduleDate.text = @"A Day";
+            break;
+    }
     
     
     [[self Schedule]setDataSource:self];
     [[self Schedule]setDelegate:self];
     
+    [[self timeView] setDataSource:self];
+    [[self timeView]setDelegate:self];
     
     _tempClasses = [[NSMutableArray alloc] initWithObjects: @"Class 1", @"Class 2", @"Class 3", @"Class 4", @"Assembly",nil];
-    
-    /*
-    [[self ScheduleTimes]setDataSource:self];
-    [[self ScheduleTimes]setDelegate:self];
-     */
-
     
     
 }
@@ -57,6 +83,7 @@
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.Schedule reloadData];
+    [self.timeView reloadData];
 
     /*
     if ([_tempClasses count] > 5)
@@ -64,7 +91,7 @@
     */
     
     
-    [_tempClasses replaceObjectsInRange: NSMakeRange(0, 4) withObjectsFromArray:[self dateParse:6]];
+    [_tempClasses replaceObjectsInRange: NSMakeRange(0, 4) withObjectsFromArray:[self dateParse:2]];
     
     
         
@@ -79,8 +106,6 @@
     
     else
         [_tempClasses insertObject:@"PL/Arts" atIndex:3];
-    
-    NSLog(@"%@", _tempClasses);
 
 }
 
@@ -101,17 +126,22 @@
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    
     //Method is run every time cell is loaded.
-        
-    static NSString *CellIdentifier = @"Cell";
-    CustomCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    [[cell ScheduleClass1] setText: [_tempClasses objectAtIndex:indexPath.item]];
+     if (collectionView == self.Schedule)
+     {
+         static NSString *CellIdentifier = @"Cell";
+         CustomCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
+         [[cell ScheduleClass1] setText: [_tempClasses objectAtIndex:indexPath.item]];
+         return cell;
+     }
+    else
+    {
+        TimeView *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"TimeCell" forIndexPath:indexPath];
+        [[cell timeCell] setText: [[[CoreData theData] timeArray] objectAtIndex:indexPath.item]];
+        return cell;
+    }
     //for all items:    indexPath.item
-    return cell;
-    
-    
 }
 
 
