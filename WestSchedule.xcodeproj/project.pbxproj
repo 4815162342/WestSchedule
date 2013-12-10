@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		720C0317182965FF00AAA98D /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 720C0316182965FF00AAA98D /* ThirdViewController.m */; };
+		7224FA221856C89A00EF4676 /* FourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7224FA211856C89A00EF4676 /* FourthViewController.m */; };
 		72344E2717FDC2B60084354A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 72344E2617FDC2B60084354A /* Icon.png */; };
 		72344E2917FDC3930084354A /* IconRes.png in Resources */ = {isa = PBXBuildFile; fileRef = 72344E2817FDC3930084354A /* IconRes.png */; };
 		7246EFB7182B3DF0008D90F2 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7246EFB6182B3DF0008D90F2 /* CustomCell.m */; };
@@ -35,6 +36,8 @@
 /* Begin PBXFileReference section */
 		720C0315182965FF00AAA98D /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
 		720C0316182965FF00AAA98D /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		7224FA201856C89A00EF4676 /* FourthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourthViewController.h; sourceTree = "<group>"; };
+		7224FA211856C89A00EF4676 /* FourthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthViewController.m; sourceTree = "<group>"; };
 		72344E2617FDC2B60084354A /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		72344E2817FDC3930084354A /* IconRes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IconRes.png; sourceTree = "<group>"; };
 		7246EFB5182B3DF0008D90F2 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
@@ -124,6 +127,8 @@
 		72EE03DC17F5FB8F005E0B62 /* WestSchedule */ = {
 			isa = PBXGroup;
 			children = (
+				7224FA201856C89A00EF4676 /* FourthViewController.h */,
+				7224FA211856C89A00EF4676 /* FourthViewController.m */,
 				720C0315182965FF00AAA98D /* ThirdViewController.h */,
 				720C0316182965FF00AAA98D /* ThirdViewController.m */,
 				72EE03E517F5FB8F005E0B62 /* AppDelegate.h */,
@@ -234,6 +239,7 @@
 				72EE03FA17F5FB8F005E0B62 /* SecondViewController.m in Sources */,
 				720C0317182965FF00AAA98D /* ThirdViewController.m in Sources */,
 				7246EFB7182B3DF0008D90F2 /* CustomCell.m in Sources */,
+				7224FA221856C89A00EF4676 /* FourthViewController.m in Sources */,
 				72AB833A18330ECA00B378FD /* CoreData.m in Sources */,
 				72A54A0E18558D080026A61E /* TimeView.m in Sources */,
 			);

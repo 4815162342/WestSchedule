@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8B659A25-B682-4281-AD39-900D11DDE6D7</string>
+	<key>IDESourceControlProjectName</key>
+	<string>WestSchedule</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>70097544-38A7-47F5-8C72-5C7414095F1E</key>
+		<string>https://github.com/4815162342/WestSchedule.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>WestSchedule.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>70097544-38A7-47F5-8C72-5C7414095F1E</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/4815162342/WestSchedule.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>70097544-38A7-47F5-8C72-5C7414095F1E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>70097544-38A7-47F5-8C72-5C7414095F1E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>WestSchedule</string>
+		</dict>
+	</array>
+</dict>
+</plist>

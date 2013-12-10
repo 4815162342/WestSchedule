@@ -38,6 +38,9 @@
     todaysDate = [formatter stringFromDate:[NSDate date]];
     Date.text = todaysDate;
     
+    _datePicker.hidden=NO;
+    
+    NSLog(@"Dis is da date: %@", _datePicker.date);
     int i=2;
     switch (i)
     {
@@ -197,6 +200,14 @@
     }
     return tempClasses;
 }
+
+
+
+
+
+
+
+
 
 
 @end
