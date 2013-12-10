@@ -38,7 +38,7 @@
     todaysDate = [formatter stringFromDate:[NSDate date]];
     Date.text = todaysDate;
     
-    int i=0;
+    int i=2;
     switch (i)
     {
         case 0:
