@@ -11,6 +11,7 @@
 		7224FA221856C89A00EF4676 /* FourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7224FA211856C89A00EF4676 /* FourthViewController.m */; };
 		72344E2717FDC2B60084354A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 72344E2617FDC2B60084354A /* Icon.png */; };
 		72344E2917FDC3930084354A /* IconRes.png in Resources */ = {isa = PBXBuildFile; fileRef = 72344E2817FDC3930084354A /* IconRes.png */; };
+		723C578D185A414C0063D627 /* NSDateRotationScheduleFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 723C578C185A414C0063D627 /* NSDateRotationScheduleFormatter.m */; };
 		7246EFB7182B3DF0008D90F2 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7246EFB6182B3DF0008D90F2 /* CustomCell.m */; };
 		7255797218271BD9001592F5 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7255797118271BD9001592F5 /* MessageUI.framework */; };
 		72A54A0E18558D080026A61E /* TimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A54A0D18558D080026A61E /* TimeView.m */; };
@@ -40,6 +41,8 @@
 		7224FA211856C89A00EF4676 /* FourthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthViewController.m; sourceTree = "<group>"; };
 		72344E2617FDC2B60084354A /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		72344E2817FDC3930084354A /* IconRes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IconRes.png; sourceTree = "<group>"; };
+		723C578B185A414C0063D627 /* NSDateRotationScheduleFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSDateRotationScheduleFormatter.h; path = WestSchedule/Rotation/NSDateRotationScheduleFormatter.h; sourceTree = "<group>"; };
+		723C578C185A414C0063D627 /* NSDateRotationScheduleFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSDateRotationScheduleFormatter.m; path = WestSchedule/Rotation/NSDateRotationScheduleFormatter.m; sourceTree = "<group>"; };
 		7246EFB5182B3DF0008D90F2 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
 		7246EFB6182B3DF0008D90F2 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
 		7255797118271BD9001592F5 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -94,6 +97,8 @@
 				72A54A0D18558D080026A61E /* TimeView.m */,
 				72AB833818330ECA00B378FD /* CoreData.h */,
 				72AB833918330ECA00B378FD /* CoreData.m */,
+				723C578B185A414C0063D627 /* NSDateRotationScheduleFormatter.h */,
+				723C578C185A414C0063D627 /* NSDateRotationScheduleFormatter.m */,
 				7246EFB5182B3DF0008D90F2 /* CustomCell.h */,
 				7246EFB6182B3DF0008D90F2 /* CustomCell.m */,
 				72344E2817FDC3930084354A /* IconRes.png */,
@@ -242,6 +247,7 @@
 				7224FA221856C89A00EF4676 /* FourthViewController.m in Sources */,
 				72AB833A18330ECA00B378FD /* CoreData.m in Sources */,
 				72A54A0E18558D080026A61E /* TimeView.m in Sources */,
+				723C578D185A414C0063D627 /* NSDateRotationScheduleFormatter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

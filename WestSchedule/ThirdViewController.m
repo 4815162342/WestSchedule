@@ -10,6 +10,7 @@
 #import "CustomCell.h"
 #import "CoreData.h"
 #import "TimeView.h"
+#import "NSDateRotationScheduleFormatter.h"
 
 @interface ThirdViewController ()
 
@@ -40,7 +41,10 @@
 
     _datePicker.hidden=YES;
     _doneBar.hidden=YES;
-
+    
+    [self updateScheduleDate: [NSDate JL_currentRotationDayWithSchoolYearBeginningOnDateString:@"2013-12-05"]];
+    
+/*
     NSLog(@"Dis is da date: %@", _datePicker.date);
     int i=3;
     switch (i)
@@ -70,6 +74,8 @@
             scheduleDate.text = @"A Day";
             break;
     }
+ 
+ */
     
     
     [[self Schedule]setDataSource:self];
@@ -81,8 +87,6 @@
     _tempClasses = [[NSMutableArray alloc] initWithObjects: @"Class 1", @"Class 2", @"Class 3", @"Class 4", @"Assembly",nil];
     
     _tempTimes = [[NSArray alloc] initWithObjects:@"8:30-9:40", @"9:55-11:05", @"11:05-1:10", @"1:10-1:40", @"#ERROR", nil];
-    
-    
 }
 
 
@@ -93,16 +97,6 @@
     
     _datePicker.hidden=YES;
     _doneBar.hidden=YES;
-
-    /*
-    if ([_tempClasses count] > 5)
-        [_tempClasses removeObjectsAtIndexes:[NSIndexSet indexSetWithIndexesInRange: NSMakeRange(5, [_tempClasses count]-1)]];
-    */
-    
-    
-    [_tempClasses replaceObjectsInRange: NSMakeRange(0, 4) withObjectsFromArray:[self dateParse:2]];
-    
-    
         
     if ([Date.text hasPrefix:@"Wed"])
     {
@@ -135,12 +129,10 @@
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
     return 1;
-    
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    
     return 5;
 }
 
@@ -238,7 +230,41 @@
     Date.text=[futureDate stringFromDate:_datePicker.date];
     [self viewWillAppear:YES];
     
+    [futureDate setDateFormat:@"yyyy-MM-d"];
     
+    [self updateScheduleDate: [NSDate JL_futureRotationDayWithSchoolYearBeginningOnDateString:@"2013-12-05" futureDate:[futureDate stringFromDate:_datePicker.date]]];
     
+}
+
+- (void) updateScheduleDate: (RotationDay) rotationDayInt;
+{    
+    if (rotationDayInt == kRotationDayA) {
+        scheduleDate.text = @"A day";
+        [_tempClasses replaceObjectsInRange: NSMakeRange(0, 4) withObjectsFromArray:[self dateParse:0]];
+    }
+    else if (rotationDayInt == kRotationDayB) {
+        scheduleDate.text = @"B day";
+        [_tempClasses replaceObjectsInRange: NSMakeRange(0, 4) withObjectsFromArray:[self dateParse:1]];
+    }
+    else if (rotationDayInt == kRotationDayC) {
+        scheduleDate.text = @"C day";
+        [_tempClasses replaceObjectsInRange: NSMakeRange(0, 4) withObjectsFromArray:[self dateParse:2]];
+    }
+    else if (rotationDayInt == kRotationDayD) {
+        scheduleDate.text = @"D day";
+        [_tempClasses replaceObjectsInRange: NSMakeRange(0, 4) withObjectsFromArray:[self dateParse:3]];
+    }
+    else if (rotationDayInt == kRotationDayE) {
+        scheduleDate.text = @"E day";
+        [_tempClasses replaceObjectsInRange: NSMakeRange(0, 4) withObjectsFromArray:[self dateParse:4]];
+    }
+    else if (rotationDayInt == kRotationDayF) {
+        scheduleDate.text = @"F day";
+        [_tempClasses replaceObjectsInRange: NSMakeRange(0, 4) withObjectsFromArray:[self dateParse:5]];
+    }
+    else if (rotationDayInt == kRotationDayG) {
+        scheduleDate.text = @"G day";
+        [_tempClasses replaceObjectsInRange: NSMakeRange(0, 4) withObjectsFromArray:[self dateParse:6]];
+    }
 }
 @end

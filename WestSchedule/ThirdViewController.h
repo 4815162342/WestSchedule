@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NSDateRotationScheduleFormatter.h"
 
 @interface ThirdViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate> {
 
     IBOutlet UILabel *Date;
     IBOutlet UILabel *scheduleDate;
     NSString *todaysDate;
+    RotationDay *rotationDayInt;
 }
 
 @property (strong, nonatomic) NSMutableArray *tempClasses;
@@ -34,6 +36,7 @@
 //@property (weak, nonatomic) IBOutlet UICollectionView *ScheduleTimes;
 
 - (NSMutableArray *) dateParse:(int)day;
+- (void) updateScheduleDate: (RotationDay) rotationDayInt;
 
 
 

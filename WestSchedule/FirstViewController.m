@@ -25,7 +25,6 @@
         
     self.currentClass = 0;
     
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,6 +37,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     self.tablePicker.hidden=YES;
+    self.lockLabel.hidden=NO;
+    _lockClasses.hidden=NO;
     
     switch (indexPath.section)
     {
@@ -111,22 +112,18 @@
     {
         
         self.Class7.text = [[[CoreData theData] all7Classes] objectAtIndex:self.currentClass];
-        
     }
-    
     return;
-    
-    
-
-    
 }
-
 
 
 - (IBAction)Change1:(id)sender {
     
     self.tablePicker.hidden = NO;
     self.currentClass = 0;
+    self.lockLabel.hidden=YES;
+    _lockClasses.hidden=YES;
+    
 }
 
 
@@ -134,36 +131,49 @@
     
     self.tablePicker.hidden = NO;
     self.currentClass = 1;
+    self.lockLabel.hidden=YES;
+    _lockClasses.hidden=YES;
 }
 
 - (IBAction)Change3:(id)sender {
     
     self.tablePicker.hidden = NO;
     self.currentClass = 2;
+    self.lockLabel.hidden=YES;
+    _lockClasses.hidden=YES;
 }
 
 - (IBAction)Change4:(id)sender {
     
     self.tablePicker.hidden = NO;
     self.currentClass = 3;
+    self.lockLabel.hidden=YES;
+    _lockClasses.hidden=YES;
 }
 
 - (IBAction)Change5:(id)sender {
     
     self.tablePicker.hidden = NO;
     self.currentClass = 4;
+    self.lockLabel.hidden=YES;
+    _lockClasses.hidden=YES;
 }
 
 - (IBAction)Change6:(id)sender {
     
     self.tablePicker.hidden = NO;
     self.currentClass = 5;
+    self.lockLabel.hidden=YES;
+    _lockClasses.hidden=YES;
+    
 }
 
 - (IBAction)Change7:(id)sender {
     
     self.tablePicker.hidden = NO;
     self.currentClass = 6;
+    self.lockLabel.hidden=YES;
+    _lockClasses.hidden=YES;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:  (NSInteger)section
@@ -299,7 +309,7 @@
 
 
 - (IBAction)lockClasses:(UISwitch *)sender {
-    if (lockClasses.on)
+    if (_lockClasses.on)
     {
         Change1.hidden = YES;
         Change2.hidden = YES;
