@@ -9,17 +9,25 @@
 #import <UIKit/UIKit.h>
 
 @interface ThirdViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate> {
-    
+
     IBOutlet UILabel *Date;
     IBOutlet UILabel *scheduleDate;
     NSString *todaysDate;
-    
 }
 
 @property (strong, nonatomic) NSMutableArray *tempClasses;
+@property (strong, nonatomic) NSArray *tempTimes;
 @property (weak, nonatomic) IBOutlet UICollectionView *Schedule;
 @property (weak, nonatomic) IBOutlet UICollectionView *timeView;
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
+@property (weak, nonatomic) IBOutlet UIToolbar *doneBar;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
+@property (weak, nonatomic) IBOutlet UIButton *changeButton;
+
+
+
+- (IBAction)changeButton:(id)sender;
+- (IBAction)doneButton:(id)sender;
 
 
 

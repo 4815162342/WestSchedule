@@ -12,7 +12,12 @@
 
 
 @property (nonatomic, strong) NSMutableArray *all7Classes;
-@property (nonatomic, strong) NSMutableArray *timeArray;
+@property (nonatomic, strong) NSArray *timeArray;
+@property (nonatomic, strong) NSArray *wednesdayArray;
+@property (nonatomic, strong) NSArray *thursdayArray;
+@property (nonatomic, strong) NSArray *fridayArray;
+
+
 
 @property (strong, nonatomic) NSArray *mathCourses;
 @property (strong, nonatomic) NSArray *scienceCourses;
@@ -26,25 +31,9 @@
 @property (strong, nonatomic) NSArray *otherCourses;
 
 
-/*
-@property (weak, nonatomic) IBOutlet UILabel *Class1;
-
-@property (weak, nonatomic) IBOutlet UILabel *Class2;
-
-@property (weak, nonatomic) IBOutlet UILabel *Class3;
-
-@property (weak, nonatomic) IBOutlet UILabel *Class4;
-
-@property (weak, nonatomic) IBOutlet UILabel *Class5;
-
-@property (weak, nonatomic) IBOutlet UILabel *Class6;
-
-@property (weak, nonatomic) IBOutlet UILabel *Class7;
-*/
-
-
-
 +(CoreData *) theData;
+
++(NSString *) pickerToString;
 
 
 @end

@@ -22,6 +22,12 @@
     return theData;
 }
 
++(NSString *)pickerToString
+{
+    
+    return @"";
+}
+
 
 
 +(id) allocWithZone:(NSZone *)zone
@@ -45,7 +51,7 @@
                         @"Period 6",
                         @"Period 7",
                         nil];
-        _timeArray = [[NSMutableArray alloc] initWithObjects:
+        _timeArray = [[NSArray alloc] initWithObjects:
                       
                       @"8:30-9:40",
                       @"9:55-11:05",
@@ -54,6 +60,38 @@
                       @"1:50-3:00",
                       
                       nil];
+
+        _wednesdayArray = [[NSArray alloc] initWithObjects:
+                      
+                      @"8:30-9:00",
+                      @"9:00-10:10",
+                      @"10:25-11:35",
+                      @"11:35-1:40",
+                      @"1:50-3:00",
+                      
+                      nil];
+        
+
+        _thursdayArray = [[NSArray alloc] initWithObjects:
+                           
+                        @"8:30-9:40",
+                        @"9:40-10:25",
+                        @"10:25-11:35",
+                        @"11:35-1:40",
+                        @"1:50-3:00",
+                        
+                        nil];
+        
+        _fridayArray = [[NSArray alloc] initWithObjects:
+                           
+                        @"8:30-9:40",
+                        @"9:55-11:05",
+                        @"11:05-1:10",
+                        @"11:35-1:40",
+                        @"1:20-2:30",
+                           
+                        nil];
+        
         
         _mathCourses = [[NSArray alloc] initWithObjects:
                         @"Geometry",
@@ -153,13 +191,13 @@
         
         _historyCourses = [[NSArray alloc] initWithObjects:
                            
-                           @"Intro to History",
-                           @"History of the Ancient World",
-                           @"History of the Modern World",
-                           @"European History AP",
-                           @"American History",
-                           @"American History AP",
-                           nil];
+                    @"Intro to History",
+                    @"History of the Ancient World",
+                    @"History of the Modern World",
+                    @"European History AP",
+                    @"American History",
+                    @"American History AP",
+                    nil];
         
         _artCourses = [[NSArray alloc] initWithObjects:
                        

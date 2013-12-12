@@ -37,11 +37,12 @@
     [formatter setDateFormat:@"EEE, MMM d"];
     todaysDate = [formatter stringFromDate:[NSDate date]];
     Date.text = todaysDate;
-    
-    _datePicker.hidden=NO;
-    
+
+    _datePicker.hidden=YES;
+    _doneBar.hidden=YES;
+
     NSLog(@"Dis is da date: %@", _datePicker.date);
-    int i=2;
+    int i=3;
     switch (i)
     {
         case 0:
@@ -79,6 +80,8 @@
     
     _tempClasses = [[NSMutableArray alloc] initWithObjects: @"Class 1", @"Class 2", @"Class 3", @"Class 4", @"Assembly",nil];
     
+    _tempTimes = [[NSArray alloc] initWithObjects:@"8:30-9:40", @"9:55-11:05", @"11:05-1:10", @"1:10-1:40", @"#ERROR", nil];
+    
     
 }
 
@@ -87,6 +90,9 @@
     [super viewWillAppear:animated];
     [self.Schedule reloadData];
     [self.timeView reloadData];
+    
+    _datePicker.hidden=YES;
+    _doneBar.hidden=YES;
 
     /*
     if ([_tempClasses count] > 5)
@@ -99,16 +105,28 @@
     
         
     if ([Date.text hasPrefix:@"Wed"])
+    {
         [_tempClasses insertObject:@"Late Arrival" atIndex:0];
+        _tempTimes = [[CoreData theData] wednesdayArray];
+    }
 
     else if ([Date.text hasPrefix:@"Thu"])
+    {
         [_tempClasses insertObject:@"Assembly" atIndex:1];
+        _tempTimes = [[CoreData theData] thursdayArray];
+    }
 
     else if ([Date.text hasPrefix:@"Fri"])
-        [_tempClasses addObject:@"Early Dismissal"];
+    {
+        [_tempClasses insertObject:@"Early Dismissal" atIndex:4];
+        _tempTimes = [[CoreData theData] fridayArray];
+    }
     
     else
+    {
         [_tempClasses insertObject:@"PL/Arts" atIndex:3];
+        _tempTimes = [[CoreData theData] timeArray];
+    }
 
 }
 
@@ -141,7 +159,7 @@
     else
     {
         TimeView *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"TimeCell" forIndexPath:indexPath];
-        [[cell timeCell] setText: [[[CoreData theData] timeArray] objectAtIndex:indexPath.item]];
+        [[cell timeCell] setText: [_tempTimes objectAtIndex:indexPath.item]];
         return cell;
     }
     //for all items:    indexPath.item
@@ -202,12 +220,25 @@
 }
 
 
+- (IBAction)changeButton:(id)sender {
+
+    _datePicker.hidden=NO;
+    _doneBar.hidden=NO;
 
 
+}
 
-
-
-
-
-
+- (IBAction)doneButton:(id)sender {
+    
+    _doneBar.hidden = YES;
+    _datePicker.hidden = YES;
+    
+    NSDateFormatter *futureDate = [[NSDateFormatter alloc] init];
+    [futureDate setDateFormat:@"EEE, MMM d"];
+    Date.text=[futureDate stringFromDate:_datePicker.date];
+    [self viewWillAppear:YES];
+    
+    
+    
+}
 @end
