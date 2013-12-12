@@ -298,4 +298,26 @@
 }
 
 
+- (IBAction)lockClasses:(UISwitch *)sender {
+    if (lockClasses.on)
+    {
+        Change1.hidden = YES;
+        Change2.hidden = YES;
+        Change3.hidden = YES;
+        Change4.hidden = YES;
+        Change5.hidden = YES;
+        Change6.hidden = YES;
+        Change7.hidden = YES;
+        return;
+    }
+    Change1.hidden = NO;
+    Change2.hidden = NO;
+    Change3.hidden = NO;
+    Change4.hidden = NO;
+    Change5.hidden = NO;
+    Change6.hidden = NO;
+    Change7.hidden = NO;
+}
+
+
 @end

@@ -96,7 +96,6 @@
 				72AB833918330ECA00B378FD /* CoreData.m */,
 				7246EFB5182B3DF0008D90F2 /* CustomCell.h */,
 				7246EFB6182B3DF0008D90F2 /* CustomCell.m */,
-				7255797118271BD9001592F5 /* MessageUI.framework */,
 				72344E2817FDC3930084354A /* IconRes.png */,
 				72344E2617FDC2B60084354A /* Icon.png */,
 				72EE03DC17F5FB8F005E0B62 /* WestSchedule */,
@@ -116,6 +115,7 @@
 		72EE03D517F5FB8F005E0B62 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7255797118271BD9001592F5 /* MessageUI.framework */,
 				7255797318271C00001592F5 /* MessageUI.framework */,
 				72EE03D617F5FB8F005E0B62 /* UIKit.framework */,
 				72EE03D817F5FB8F005E0B62 /* Foundation.framework */,

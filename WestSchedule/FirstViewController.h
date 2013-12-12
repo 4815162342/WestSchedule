@@ -18,6 +18,7 @@
     IBOutlet UIButton *Change5;
     IBOutlet UIButton *Change6;
     IBOutlet UIButton *Change7;
+    IBOutlet UISwitch *lockClasses;
 }
 
 @property (strong, nonatomic) IBOutlet UITableView *tablePicker;
@@ -46,6 +47,10 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *Class7;
 - (IBAction)Change7:(id)sender;
+
+
+- (IBAction)lockClasses:(UISwitch *)sender;
+
 
 
 
