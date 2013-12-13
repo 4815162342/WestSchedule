@@ -37,6 +37,7 @@
 
 - (NSMutableArray *) dateParse:(int)day;
 - (void) updateScheduleDate: (RotationDay) rotationDayInt;
+- (void) updateExtraPeriods;
 
 
 

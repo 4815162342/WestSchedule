@@ -33,6 +33,14 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    [[self Schedule]setDataSource:self];
+    [[self Schedule]setDelegate:self];
+    
+    [[self timeView] setDataSource:self];
+    [[self timeView]setDelegate:self];
+    
+    _tempClasses = [[NSMutableArray alloc] initWithObjects: @"Class 1", @"Class 2", @"Class 3", @"Class 4", @"Assembly",nil];
+    _tempTimes = [[NSArray alloc] initWithObjects:@"8:30-9:40", @"9:55-11:05", @"11:05-1:10", @"1:10-1:40", @"#ERROR", nil];
 
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"EEE, MMM d"];
@@ -44,49 +52,8 @@
     
     [self updateScheduleDate: [NSDate JL_currentRotationDayWithSchoolYearBeginningOnDateString:@"2013-12-05"]];
     
-/*
-    NSLog(@"Dis is da date: %@", _datePicker.date);
-    int i=3;
-    switch (i)
-    {
-        case 0:
-            scheduleDate.text = @"A Day";
-            break;
-        case 1:
-            scheduleDate.text = @"B Day";
-            break;
-        case 2:
-            scheduleDate.text = @"C Day";
-            break;
-        case 3:
-            scheduleDate.text = @"D Day";
-            break;
-        case 4:
-            scheduleDate.text = @"E Day";
-            break;
-        case 5:
-            scheduleDate.text = @"F Day";
-            break;
-        case 6:
-            scheduleDate.text = @"G Day";
-            break;
-        default:
-            scheduleDate.text = @"A Day";
-            break;
-    }
- 
- */
     
-    
-    [[self Schedule]setDataSource:self];
-    [[self Schedule]setDelegate:self];
-    
-    [[self timeView] setDataSource:self];
-    [[self timeView]setDelegate:self];
-    
-    _tempClasses = [[NSMutableArray alloc] initWithObjects: @"Class 1", @"Class 2", @"Class 3", @"Class 4", @"Assembly",nil];
-    
-    _tempTimes = [[NSArray alloc] initWithObjects:@"8:30-9:40", @"9:55-11:05", @"11:05-1:10", @"1:10-1:40", @"#ERROR", nil];
+    [self updateExtraPeriods];
 }
 
 
@@ -94,34 +61,6 @@
     [super viewWillAppear:animated];
     [self.Schedule reloadData];
     [self.timeView reloadData];
-    
-    _datePicker.hidden=YES;
-    _doneBar.hidden=YES;
-        
-    if ([Date.text hasPrefix:@"Wed"])
-    {
-        [_tempClasses insertObject:@"Late Arrival" atIndex:0];
-        _tempTimes = [[CoreData theData] wednesdayArray];
-    }
-
-    else if ([Date.text hasPrefix:@"Thu"])
-    {
-        [_tempClasses insertObject:@"Assembly" atIndex:1];
-        _tempTimes = [[CoreData theData] thursdayArray];
-    }
-
-    else if ([Date.text hasPrefix:@"Fri"])
-    {
-        [_tempClasses insertObject:@"Early Dismissal" atIndex:4];
-        _tempTimes = [[CoreData theData] fridayArray];
-    }
-    
-    else
-    {
-        [_tempClasses insertObject:@"PL/Arts" atIndex:3];
-        _tempTimes = [[CoreData theData] timeArray];
-    }
-
 }
 
 
@@ -233,38 +172,69 @@
     [futureDate setDateFormat:@"yyyy-MM-d"];
     
     [self updateScheduleDate: [NSDate JL_futureRotationDayWithSchoolYearBeginningOnDateString:@"2013-12-05" futureDate:[futureDate stringFromDate:_datePicker.date]]];
+    [self updateExtraPeriods];
     
 }
 
-- (void) updateScheduleDate: (RotationDay) rotationDayInt;
-{    
-    if (rotationDayInt == kRotationDayA) {
+- (void) updateScheduleDate: (RotationDay) tempDayInt;
+{
+    if (tempDayInt == kRotationDayA) {
         scheduleDate.text = @"A day";
         [_tempClasses replaceObjectsInRange: NSMakeRange(0, 4) withObjectsFromArray:[self dateParse:0]];
     }
-    else if (rotationDayInt == kRotationDayB) {
+    else if (tempDayInt == kRotationDayB) {
         scheduleDate.text = @"B day";
         [_tempClasses replaceObjectsInRange: NSMakeRange(0, 4) withObjectsFromArray:[self dateParse:1]];
     }
-    else if (rotationDayInt == kRotationDayC) {
+    else if (tempDayInt == kRotationDayC) {
         scheduleDate.text = @"C day";
         [_tempClasses replaceObjectsInRange: NSMakeRange(0, 4) withObjectsFromArray:[self dateParse:2]];
     }
-    else if (rotationDayInt == kRotationDayD) {
+    else if (tempDayInt == kRotationDayD) {
         scheduleDate.text = @"D day";
         [_tempClasses replaceObjectsInRange: NSMakeRange(0, 4) withObjectsFromArray:[self dateParse:3]];
     }
-    else if (rotationDayInt == kRotationDayE) {
+    else if (tempDayInt == kRotationDayE) {
         scheduleDate.text = @"E day";
         [_tempClasses replaceObjectsInRange: NSMakeRange(0, 4) withObjectsFromArray:[self dateParse:4]];
     }
-    else if (rotationDayInt == kRotationDayF) {
+    else if (tempDayInt == kRotationDayF) {
         scheduleDate.text = @"F day";
         [_tempClasses replaceObjectsInRange: NSMakeRange(0, 4) withObjectsFromArray:[self dateParse:5]];
     }
-    else if (rotationDayInt == kRotationDayG) {
+    else {
         scheduleDate.text = @"G day";
         [_tempClasses replaceObjectsInRange: NSMakeRange(0, 4) withObjectsFromArray:[self dateParse:6]];
     }
+    
+    
+}
+
+- (void) updateExtraPeriods
+{
+    if ([Date.text hasPrefix:@"Wed"])
+    {
+        [_tempClasses insertObject:@"Late Arrival" atIndex:0];
+        _tempTimes = [[CoreData theData] wednesdayArray];
+    }
+    
+    else if ([Date.text hasPrefix:@"Thu"])
+    {
+        [_tempClasses insertObject:@"Assembly" atIndex:1];
+        _tempTimes = [[CoreData theData] thursdayArray];
+    }
+    
+    else if ([Date.text hasPrefix:@"Fri"])
+    {
+        [_tempClasses insertObject:@"Early Dismissal" atIndex:4];
+        _tempTimes = [[CoreData theData] fridayArray];
+    }
+
+    else
+    {
+        [_tempClasses insertObject:@"PL/Arts" atIndex:3];
+        _tempTimes = [[CoreData theData] timeArray];
+    }
+    
 }
 @end

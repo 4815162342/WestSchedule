@@ -200,9 +200,8 @@
                                     <outlet property="delegate" destination="2" id="d2g-ff-5Vn"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lock all classes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ING-OY-xAr">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lock classes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ING-OY-xAr">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" type="user" id="AxZ-g0-usY"/>
                                     <constraint firstAttribute="width" constant="151" id="sz9-Lm-Pb1"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
@@ -374,11 +373,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Today is" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1e-xt-wCQ">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dhl-va-N4X">
                                 <color key="backgroundColor" red="0.29803922772407532" green="0.29803922772407532" blue="0.29803922772407532" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -508,7 +502,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             </toolbar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hb2-ul-D08">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="∆">
+                                <state key="normal" title="Change Day">
                                     <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -522,24 +516,23 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </subviews>
                         <color key="backgroundColor" red="0.57303650145318552" green="0.76092155612244894" blue="0.54657457748570037" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="IIl-gi-sHv" firstAttribute="baseline" secondItem="p17-8h-kFP" secondAttribute="baseline" type="default" id="0JC-mJ-RDz"/>
                             <constraint firstItem="dhl-va-N4X" firstAttribute="leading" secondItem="V0F-yy-HD9" secondAttribute="leading" type="default" id="1f8-9j-RAJ"/>
-                            <constraint firstItem="X1e-xt-wCQ" firstAttribute="leading" secondItem="V0F-yy-HD9" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="2IR-CB-TBT"/>
                             <constraint firstItem="Hb2-ul-D08" firstAttribute="baseline" secondItem="IIl-gi-sHv" secondAttribute="baseline" type="default" id="2hM-ag-ipS"/>
+                            <constraint firstItem="p17-8h-kFP" firstAttribute="leading" secondItem="V0F-yy-HD9" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="4GR-sk-M25"/>
                             <constraint firstItem="YKL-b9-p2g" firstAttribute="leading" secondItem="V0F-yy-HD9" secondAttribute="leading" type="default" id="6BA-N0-y9k"/>
                             <constraint firstItem="EIY-df-cPm" firstAttribute="trailing" secondItem="V0F-yy-HD9" secondAttribute="trailing" type="default" id="9n4-tv-iNm"/>
-                            <constraint firstAttribute="trailing" secondItem="Hb2-ul-D08" secondAttribute="trailing" constant="89" id="9yE-2p-rIP"/>
                             <constraint firstAttribute="trailing" secondItem="IIl-gi-sHv" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="CfZ-if-pRl"/>
                             <constraint firstItem="YKL-b9-p2g" firstAttribute="trailing" secondItem="V0F-yy-HD9" secondAttribute="trailing" type="default" id="FcE-k1-7zx"/>
                             <constraint firstAttribute="bottom" secondItem="dhl-va-N4X" secondAttribute="bottom" type="user" id="K2O-Rk-BaO"/>
                             <constraint firstItem="YKL-b9-p2g" firstAttribute="bottom" secondItem="HNc-EH-uie" secondAttribute="top" type="default" id="MVY-l1-gqt"/>
                             <constraint firstItem="HNc-EH-uie" firstAttribute="trailing" secondItem="V0F-yy-HD9" secondAttribute="trailing" type="default" id="UQb-pF-Dn3"/>
                             <constraint firstItem="HNc-EH-uie" firstAttribute="leading" secondItem="V0F-yy-HD9" secondAttribute="leading" type="default" id="a0e-UO-K2h"/>
-                            <constraint firstItem="p17-8h-kFP" firstAttribute="leading" secondItem="X1e-xt-wCQ" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="fGK-hY-24Q"/>
-                            <constraint firstItem="IIl-gi-sHv" firstAttribute="top" secondItem="V0F-yy-HD9" secondAttribute="top" constant="20" symbolic="YES" type="default" id="gR8-CG-NDR"/>
+                            <constraint firstItem="Hb2-ul-D08" firstAttribute="top" secondItem="V0F-yy-HD9" secondAttribute="top" constant="-1" id="cwH-gc-VWi"/>
                             <constraint firstItem="YKL-b9-p2g" firstAttribute="top" secondItem="V0F-yy-HD9" secondAttribute="top" constant="143" id="iA5-xk-ef9"/>
-                            <constraint firstItem="p17-8h-kFP" firstAttribute="top" secondItem="V0F-yy-HD9" secondAttribute="top" constant="20" symbolic="YES" type="default" id="kAE-0e-I8X"/>
-                            <constraint firstItem="X1e-xt-wCQ" firstAttribute="top" secondItem="V0F-yy-HD9" secondAttribute="top" constant="20" symbolic="YES" type="user" id="tTa-li-OjV"/>
+                            <constraint firstItem="IIl-gi-sHv" firstAttribute="leading" secondItem="Hb2-ul-D08" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="j6E-Ou-7Gb"/>
                             <constraint firstItem="EIY-df-cPm" firstAttribute="bottom" secondItem="V0F-yy-HD9" secondAttribute="bottom" type="default" id="v52-vK-EYH"/>
+                            <constraint firstItem="Hb2-ul-D08" firstAttribute="centerY" secondItem="IIl-gi-sHv" secondAttribute="centerY" type="default" id="yxR-6a-aaE"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Schedule" image="first.png" id="FRX-ci-aqT" userLabel="Tab Bar Item - Schedule"/>
