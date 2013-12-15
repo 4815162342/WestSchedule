@@ -12,12 +12,11 @@
 
 
 @property (nonatomic, strong) NSMutableArray *all7Classes;
+
 @property (nonatomic, strong) NSArray *timeArray;
 @property (nonatomic, strong) NSArray *wednesdayArray;
 @property (nonatomic, strong) NSArray *thursdayArray;
 @property (nonatomic, strong) NSArray *fridayArray;
-
-
 
 @property (strong, nonatomic) NSArray *mathCourses;
 @property (strong, nonatomic) NSArray *scienceCourses;

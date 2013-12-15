@@ -41,7 +41,7 @@
     self = [super init];
     if (self)
     {
-        //set up instance variables
+        
         _all7Classes = [[NSMutableArray alloc] initWithObjects:
                         @"Period 1",
                         @"Period 2",

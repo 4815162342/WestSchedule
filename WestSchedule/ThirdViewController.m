@@ -61,6 +61,11 @@
     [super viewWillAppear:animated];
     [self.Schedule reloadData];
     [self.timeView reloadData];
+    
+    NSDateFormatter *futureDate = [[NSDateFormatter alloc] init];
+    [futureDate setDateFormat:@"yyyy-MM-d"];
+
+    [self updateScheduleDate: [NSDate JL_futureRotationDayWithSchoolYearBeginningOnDateString:@"2013-12-05" futureDate:[futureDate stringFromDate:_datePicker.date]]];
 }
 
 
@@ -167,7 +172,8 @@
     NSDateFormatter *futureDate = [[NSDateFormatter alloc] init];
     [futureDate setDateFormat:@"EEE, MMM d"];
     Date.text=[futureDate stringFromDate:_datePicker.date];
-    [self viewWillAppear:YES];
+    [self.Schedule reloadData];
+    [self.timeView reloadData];
     
     [futureDate setDateFormat:@"yyyy-MM-d"];
     
@@ -224,7 +230,7 @@
         _tempTimes = [[CoreData theData] thursdayArray];
     }
     
-    else if ([Date.text hasPrefix:@"Fri"])
+    else if ([Date.text hasPrefix:@"Fri"] || [Date.text hasPrefix:@"Sat"] || [Date.text hasPrefix:@"Sun"])
     {
         [_tempClasses insertObject:@"Early Dismissal" atIndex:4];
         _tempTimes = [[CoreData theData] fridayArray];
