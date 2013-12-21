@@ -15,6 +15,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    /*
     self.all7Classes = [[NSMutableArray alloc] initWithObjects:
                         @"Period 1",
                         @"Period 2",
@@ -24,6 +26,32 @@
                         @"Period 6",
                         @"Period 7",
                         nil];
+    */
+    
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSArray *loadArray = [defaults objectForKey:@"savedArray"];
+
+    if ([loadArray objectAtIndex:0 ] != nil)
+        [[[CoreData theData] all7Classes] setArray: loadArray ];
+    
+    UITabBar *tabBar = [UITabBar appearance];
+    [tabBar setBackgroundImage:[UIImage imageNamed:@"Tab bar.png"]];
+    
+    
+    
+    UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
+    tabBar = tabBarController.tabBar;
+    UITabBarItem *tabBarItem0 = [tabBar.items objectAtIndex:0];
+    UITabBarItem *tabBarItem1 = [tabBar.items objectAtIndex:1];
+    UITabBarItem *tabBarItem2 = [tabBar.items objectAtIndex:2];
+    
+    [tabBarItem0 initWithTitle:@"" image:[UIImage imageNamed:nil] tag: 0];
+    [tabBarItem1 initWithTitle:@"" image:[UIImage imageNamed:nil] tag: 1];
+    [tabBarItem2 initWithTitle:@"" image:[UIImage imageNamed:nil] tag: 2];
+
+    
+    
     
     // Override point for customization after application launch.
     return YES;
@@ -59,8 +87,9 @@
     //SAVE THE CLASSES
     
     
+    NSArray *saveArray = [[CoreData theData] all7Classes];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:[[CoreData theData] all7Classes] forKey:@"savedArray"];
+    [defaults setObject:saveArray forKey:@"savedArray"];
     [defaults synchronize];
     
     
