@@ -13,6 +13,8 @@
 
 @property (nonatomic, strong) NSMutableArray *all7Classes;
 
+@property (nonatomic, strong) NSMutableArray *bigAllClasses;
+
 @property (nonatomic, strong) NSArray *timeArray;
 @property (nonatomic, strong) NSArray *wednesdayArray;
 @property (nonatomic, strong) NSArray *thursdayArray;

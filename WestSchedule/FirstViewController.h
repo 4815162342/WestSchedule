@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface FirstViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UISearchDisplayDelegate>
 
 {
     IBOutlet UIButton *Change1;
@@ -21,7 +21,8 @@
 }
 
 @property (strong, nonatomic) IBOutlet UITableView *tablePicker;
-
+@property IBOutlet UISearchBar *classSearchBar;
+@property (strong, nonatomic) NSMutableArray *filteredClassArray;
 
 
 @property (strong, nonatomic) IBOutlet UILabel *Class1;

@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "72EE03D217F5FB8E005E0B62"
                BuildableName = "WestSchedule.app"
-               BlueprintName = "WestSchedule"
-               ReferencedContainer = "container:WestSchedule.xcodeproj">
+               BlueprintName = "WMS Schedule"
+               ReferencedContainer = "container:WMS Schedule.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "72EE03D217F5FB8E005E0B62"
             BuildableName = "WestSchedule.app"
-            BlueprintName = "WestSchedule"
-            ReferencedContainer = "container:WestSchedule.xcodeproj">
+            BlueprintName = "WMS Schedule"
+            ReferencedContainer = "container:WMS Schedule.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -53,8 +53,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "72EE03D217F5FB8E005E0B62"
             BuildableName = "WestSchedule.app"
-            BlueprintName = "WestSchedule"
-            ReferencedContainer = "container:WestSchedule.xcodeproj">
+            BlueprintName = "WMS Schedule"
+            ReferencedContainer = "container:WMS Schedule.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -71,8 +71,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "72EE03D217F5FB8E005E0B62"
             BuildableName = "WestSchedule.app"
-            BlueprintName = "WestSchedule"
-            ReferencedContainer = "container:WestSchedule.xcodeproj">
+            BlueprintName = "WMS Schedule"
+            ReferencedContainer = "container:WMS Schedule.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

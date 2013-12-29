@@ -199,9 +199,17 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="499"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <color key="separatorColor" red="0.036265060262445914" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search Classes" id="sA5-lh-hkv" userLabel="Search Bar with Scope Bar">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="2" id="BHl-VN-4Xn"/>
+                                    </connections>
+                                </searchBar>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="allClasses" textLabel="5cZ-ax-OJi" style="IBUITableViewCellStyleDefault" id="pXM-9n-N0a">
-                                        <rect key="frame" x="0.0" y="46" width="320" height="46"/>
+                                        <rect key="frame" x="0.0" y="80" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
@@ -209,7 +217,7 @@
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5cZ-ax-OJi">
                                                     <rect key="frame" x="10" y="0.0" width="280" height="43"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
@@ -249,7 +257,6 @@
                             <constraint firstItem="Dgt-qD-MUD" firstAttribute="leading" secondItem="16" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="7b8-4e-SMC"/>
                             <constraint firstItem="u62-uB-E5X" firstAttribute="leading" secondItem="16" secondAttribute="leading" type="default" id="8wn-vL-BoH"/>
                             <constraint firstItem="E1o-iu-lsH" firstAttribute="baseline" secondItem="KFc-sG-Snv" secondAttribute="baseline" type="default" id="9Ri-On-Xqu"/>
-                            <constraint firstItem="I1G-RT-SOy" firstAttribute="top" secondItem="16" secondAttribute="top" constant="58" id="A8n-Ro-A7B"/>
                             <constraint firstItem="iKX-tP-7FN" firstAttribute="leading" secondItem="Paq-dq-ZwE" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="DEh-aw-Epz"/>
                             <constraint firstAttribute="bottom" secondItem="u62-uB-E5X" secondAttribute="bottom" type="default" id="DUD-qE-94k"/>
                             <constraint firstItem="lxz-tG-nli" firstAttribute="leading" secondItem="Dgt-qD-MUD" secondAttribute="leading" type="default" id="EU0-Tb-QPV"/>
@@ -267,9 +274,9 @@
                             <constraint firstItem="uNc-q0-KJw" firstAttribute="leading" secondItem="DFt-N5-eUd" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="LBl-z7-ZUI"/>
                             <constraint firstItem="DFt-N5-eUd" firstAttribute="top" secondItem="16" secondAttribute="top" constant="156" id="Lpl-CL-hue"/>
                             <constraint firstItem="J0j-P1-vjQ" firstAttribute="baseline" secondItem="dbR-hk-Iq2" secondAttribute="baseline" type="default" id="OSX-2A-f8B"/>
+                            <constraint firstItem="u62-uB-E5X" firstAttribute="top" secondItem="16" secondAttribute="top" type="default" id="PFw-DG-dM5"/>
                             <constraint firstItem="lt8-pq-lIX" firstAttribute="baseline" secondItem="n6M-ly-YbT" secondAttribute="baseline" type="default" id="PnU-tr-xTc"/>
                             <constraint firstItem="Paq-dq-ZwE" firstAttribute="leading" secondItem="MzJ-ek-zqb" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="QBr-YA-Bt2"/>
-                            <constraint firstItem="u62-uB-E5X" firstAttribute="top" secondItem="16" secondAttribute="top" type="default" id="QHR-Ex-brY"/>
                             <constraint firstItem="OuJ-5r-pK6" firstAttribute="baseline" secondItem="Dgt-qD-MUD" secondAttribute="baseline" type="default" id="RAK-zq-Tri"/>
                             <constraint firstItem="RzG-0G-gf8" firstAttribute="leading" secondItem="MzJ-ek-zqb" secondAttribute="leading" type="default" id="SAx-XQ-Ve5"/>
                             <constraint firstItem="OuJ-5r-pK6" firstAttribute="centerY" secondItem="rnX-HM-0dE" secondAttribute="centerY" type="default" id="SJB-1a-Vbb"/>
@@ -277,6 +284,7 @@
                             <constraint firstItem="uNc-q0-KJw" firstAttribute="baseline" secondItem="DFt-N5-eUd" secondAttribute="baseline" type="default" id="TEb-Ar-0jd"/>
                             <constraint firstAttribute="trailing" secondItem="pV5-YK-MGa" secondAttribute="trailing" constant="46" id="TRr-bs-L0s"/>
                             <constraint firstItem="RzG-0G-gf8" firstAttribute="baseline" secondItem="n6M-ly-YbT" secondAttribute="baseline" type="default" id="Tzf-AG-nlM"/>
+                            <constraint firstItem="I1G-RT-SOy" firstAttribute="top" secondItem="16" secondAttribute="top" constant="58" id="Usi-fu-1XS"/>
                             <constraint firstItem="rnX-HM-0dE" firstAttribute="leading" secondItem="OuJ-5r-pK6" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Yuw-0e-Og2"/>
                             <constraint firstAttribute="trailing" secondItem="u62-uB-E5X" secondAttribute="trailing" type="default" id="Z5j-Dt-TcI"/>
                             <constraint firstItem="EHe-Xa-p8L" firstAttribute="baseline" secondItem="I1G-RT-SOy" secondAttribute="baseline" type="default" id="ZRA-mx-rbs"/>
@@ -316,12 +324,23 @@
                         <outlet property="Class5" destination="iKX-tP-7FN" id="BnA-JA-TqC"/>
                         <outlet property="Class6" destination="lt8-pq-lIX" id="ybf-by-jem"/>
                         <outlet property="Class7" destination="E1o-iu-lsH" id="6C2-LE-DkP"/>
+                        <outlet property="classSearchBar" destination="sA5-lh-hkv" id="WHT-Ue-tgb"/>
                         <outlet property="lockClasses" destination="pV5-YK-MGa" id="buN-Gt-Crp"/>
                         <outlet property="lockLabel" destination="ING-OY-xAr" id="cZj-c8-0ra"/>
+                        <outlet property="searchDisplayController" destination="dYn-Ka-1ej" id="3yq-Yv-FZw"/>
                         <outlet property="tablePicker" destination="u62-uB-E5X" id="1lt-nD-qfh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="dYn-Ka-1ej">
+                    <connections>
+                        <outlet property="delegate" destination="2" id="NI0-oT-YfY"/>
+                        <outlet property="searchBar" destination="sA5-lh-hkv" id="KMd-kY-7Wo"/>
+                        <outlet property="searchContentsController" destination="2" id="5VD-Zs-wQd"/>
+                        <outlet property="searchResultsDataSource" destination="2" id="Vk6-VQ-7Sr"/>
+                        <outlet property="searchResultsDelegate" destination="2" id="O4o-iJ-M82"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="710" y="-486"/>
         </scene>

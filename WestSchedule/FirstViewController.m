@@ -25,6 +25,11 @@
         
     self.currentClass = 0;
     
+    [self.classSearchBar setShowsScopeBar:NO];
+    [self.classSearchBar sizeToFit];
+    
+    self.filteredClassArray = [NSMutableArray arrayWithCapacity: [[[CoreData theData] bigAllClasses] count]];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -178,6 +183,10 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:  (NSInteger)section
 {
+    
+    if (tableView == self.searchDisplayController.searchResultsTableView)
+        return [_filteredClassArray count];
+    
     switch (section){
         case 0:
             return [[[CoreData theData] mathCourses] count];
@@ -265,6 +274,15 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"allClasses"];
     
+    if (tableView == self.searchDisplayController.searchResultsTableView)
+	{
+        NSLog(@"%@", _filteredClassArray);
+        cell.textLabel.text = [_filteredClassArray objectAtIndex:[indexPath row]];
+        return cell;
+        
+    }
+    
+    
     switch (indexPath.section)
     {
             
@@ -306,6 +324,47 @@
     
     return cell;
 }
+
+- (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
+{
+	// Update the filtered array based on the search text and scope.
+	
+	[self.filteredClassArray removeAllObjects];
+    
+	// Filter the array using NSPredicate
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF contains %@",searchText];
+    NSArray *tempArray = [[[CoreData theData] bigAllClasses] filteredArrayUsingPredicate:predicate];
+    
+    if(![scope isEqualToString:@"All"]) {
+        // Further filter the array with the scope
+        NSPredicate *scopePredicate = [NSPredicate predicateWithFormat:@"SELF contains %@",scope];
+        tempArray = [tempArray filteredArrayUsingPredicate:scopePredicate];
+    }
+    
+    _filteredClassArray = [NSMutableArray arrayWithArray:tempArray];
+}
+
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+{
+    // Tells the table data source to reload when text changes
+    [self filterContentForSearchText:searchString scope:
+     [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
+    
+    // Return YES to cause the search result table view to be reloaded.
+    return YES;
+}
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption
+{
+    // Tells the table data source to reload when scope bar selection changes
+    [self filterContentForSearchText:[self.searchDisplayController.searchBar text] scope:
+     [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:searchOption]];
+    
+    // Return YES to cause the search result table view to be reloaded.
+    return YES;
+}
+
 
 
 - (IBAction)lockClasses:(UISwitch *)sender {

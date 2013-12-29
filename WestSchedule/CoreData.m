@@ -234,8 +234,19 @@
                         @"P.E.",
                         @"Peer Leadership",
                         nil];
-
         
+        
+        _bigAllClasses = [[NSMutableArray alloc] initWithArray:_mathCourses];
+        [_bigAllClasses addObjectsFromArray:_scienceCourses];
+        [_bigAllClasses addObjectsFromArray:_englishCourses];
+        [_bigAllClasses addObjectsFromArray:_spanishCourses];
+        [_bigAllClasses addObjectsFromArray:_frenchCourses];
+        [_bigAllClasses addObjectsFromArray:_latinCourses];
+        [_bigAllClasses addObjectsFromArray:_chineseCourses];
+        [_bigAllClasses addObjectsFromArray:_historyCourses];
+        [_bigAllClasses addObjectsFromArray:_artCourses];
+        [_bigAllClasses addObjectsFromArray:_otherCourses];
+              
         
     }
     
