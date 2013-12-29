@@ -50,7 +50,7 @@
     _datePicker.hidden=YES;
     _doneBar.hidden=YES;
     
-    [self updateScheduleDate: [NSDate JL_currentRotationDayWithSchoolYearBeginningOnDateString:@"2013-12-05"]];
+    [self updateScheduleDate: [NSDate JL_currentRotationDayWithSchoolYearBeginningOnDateString:@"2014-01-06"]];
     
     
     [self updateExtraPeriods];
@@ -65,7 +65,7 @@
     NSDateFormatter *futureDate = [[NSDateFormatter alloc] init];
     [futureDate setDateFormat:@"yyyy-MM-d"];
 
-    [self updateScheduleDate: [NSDate JL_futureRotationDayWithSchoolYearBeginningOnDateString:@"2013-12-05" futureDate:[futureDate stringFromDate:_datePicker.date]]];
+    [self updateScheduleDate: [NSDate JL_futureRotationDayWithSchoolYearBeginningOnDateString:@"2014-01-06" futureDate:[futureDate stringFromDate:_datePicker.date]]];
 }
 
 
@@ -177,7 +177,7 @@
     
     [futureDate setDateFormat:@"yyyy-MM-d"];
     
-    [self updateScheduleDate: [NSDate JL_futureRotationDayWithSchoolYearBeginningOnDateString:@"2013-12-05" futureDate:[futureDate stringFromDate:_datePicker.date]]];
+    [self updateScheduleDate: [NSDate JL_futureRotationDayWithSchoolYearBeginningOnDateString:@"2014-01-06" futureDate:[futureDate stringFromDate:_datePicker.date]]];
     [self updateExtraPeriods];
     
 }

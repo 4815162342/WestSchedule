@@ -199,17 +199,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="499"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <color key="separatorColor" red="0.036265060262445914" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search Classes" id="sA5-lh-hkv" userLabel="Search Bar with Scope Bar">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                    <textInputTraits key="textInputTraits"/>
-                                    <connections>
-                                        <outlet property="delegate" destination="2" id="BHl-VN-4Xn"/>
-                                    </connections>
-                                </searchBar>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="allClasses" textLabel="5cZ-ax-OJi" style="IBUITableViewCellStyleDefault" id="pXM-9n-N0a">
-                                        <rect key="frame" x="0.0" y="80" width="320" height="46"/>
+                                        <rect key="frame" x="0.0" y="46" width="320" height="46"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
@@ -324,7 +316,6 @@
                         <outlet property="Class5" destination="iKX-tP-7FN" id="BnA-JA-TqC"/>
                         <outlet property="Class6" destination="lt8-pq-lIX" id="ybf-by-jem"/>
                         <outlet property="Class7" destination="E1o-iu-lsH" id="6C2-LE-DkP"/>
-                        <outlet property="classSearchBar" destination="sA5-lh-hkv" id="WHT-Ue-tgb"/>
                         <outlet property="lockClasses" destination="pV5-YK-MGa" id="buN-Gt-Crp"/>
                         <outlet property="lockLabel" destination="ING-OY-xAr" id="cZj-c8-0ra"/>
                         <outlet property="searchDisplayController" destination="dYn-Ka-1ej" id="3yq-Yv-FZw"/>
@@ -335,7 +326,6 @@
                 <searchDisplayController id="dYn-Ka-1ej">
                     <connections>
                         <outlet property="delegate" destination="2" id="NI0-oT-YfY"/>
-                        <outlet property="searchBar" destination="sA5-lh-hkv" id="KMd-kY-7Wo"/>
                         <outlet property="searchContentsController" destination="2" id="5VD-Zs-wQd"/>
                         <outlet property="searchResultsDataSource" destination="2" id="Vk6-VQ-7Sr"/>
                         <outlet property="searchResultsDelegate" destination="2" id="O4o-iJ-M82"/>
