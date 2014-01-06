@@ -50,6 +50,8 @@
 		7261CC6518651E12000598F6 /* Tab bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tab bar.png"; sourceTree = "<group>"; };
 		72A54A0C18558CAC0026A61E /* TimeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeView.h; sourceTree = "<group>"; };
 		72A54A0D18558D080026A61E /* TimeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimeView.m; path = WestSchedule/TimeView.m; sourceTree = "<group>"; };
+		72A8914F18708CFD008D71EE /* 58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 58.png; path = WestSchedule/58.png; sourceTree = "<group>"; };
+		72A8915018708D5D008D71EE /* 80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 80.png; path = WestSchedule/80.png; sourceTree = "<group>"; };
 		72AB833818330ECA00B378FD /* CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreData.h; path = WestSchedule/CoreData.h; sourceTree = "<group>"; };
 		72AB833918330ECA00B378FD /* CoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreData.m; path = WestSchedule/CoreData.m; sourceTree = "<group>"; };
 		72EE03D317F5FB8F005E0B62 /* WMS Schedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WMS Schedule.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +96,8 @@
 		72EE03CA17F5FB8E005E0B62 = {
 			isa = PBXGroup;
 			children = (
+				72A8915018708D5D008D71EE /* 80.png */,
+				72A8914F18708CFD008D71EE /* 58.png */,
 				7261CC6518651E12000598F6 /* Tab bar.png */,
 				72A54A0C18558CAC0026A61E /* TimeView.h */,
 				72A54A0D18558D080026A61E /* TimeView.m */,
@@ -196,6 +200,11 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Adam Sanders";
+				TargetAttributes = {
+					72EE03D217F5FB8E005E0B62 = {
+						DevelopmentTeam = V5N26HP5JJ;
+					};
+				};
 			};
 			buildConfigurationList = 72EE03CE17F5FB8E005E0B62 /* Build configuration list for PBXProject "WMS Schedule" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -335,13 +344,13 @@
 		72EE040217F5FB8F005E0B62 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WestSchedule/WMS Schedule-Prefix.pch";
 				INFOPLIST_FILE = "WestSchedule/WMS Schedule-Info.plist";
 				PRODUCT_NAME = "WMS Schedule";
+				PROVISIONING_PROFILE = "70716C5F-8564-4171-B36A-CBA635AC546A";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -349,13 +358,13 @@
 		72EE040317F5FB8F005E0B62 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WestSchedule/WMS Schedule-Prefix.pch";
 				INFOPLIST_FILE = "WestSchedule/WMS Schedule-Info.plist";
 				PRODUCT_NAME = "WMS Schedule";
+				PROVISIONING_PROFILE = "70716C5F-8564-4171-B36A-CBA635AC546A";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
