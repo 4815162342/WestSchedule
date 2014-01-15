@@ -46,9 +46,9 @@
     UITabBarItem *tabBarItem1 = [tabBar.items objectAtIndex:1];
     UITabBarItem *tabBarItem2 = [tabBar.items objectAtIndex:2];
     
-    [tabBarItem0 initWithTitle:@"" image:[UIImage imageNamed:nil] tag: 0];
-    [tabBarItem1 initWithTitle:@"" image:[UIImage imageNamed:nil] tag: 1];
-    [tabBarItem2 initWithTitle:@"" image:[UIImage imageNamed:nil] tag: 2];
+    [tabBarItem0 setImage:nil];
+    [tabBarItem1 setImage:nil];
+    [tabBarItem2 setImage:nil];
 
     
     

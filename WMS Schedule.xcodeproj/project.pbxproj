@@ -8,15 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		720C0317182965FF00AAA98D /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 720C0316182965FF00AAA98D /* ThirdViewController.m */; };
-		72344E2717FDC2B60084354A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 72344E2617FDC2B60084354A /* Icon.png */; };
-		72344E2917FDC3930084354A /* IconRes.png in Resources */ = {isa = PBXBuildFile; fileRef = 72344E2817FDC3930084354A /* IconRes.png */; };
 		723C578D185A414C0063D627 /* NSDateRotationScheduleFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 723C578C185A414C0063D627 /* NSDateRotationScheduleFormatter.m */; };
 		7246EFB7182B3DF0008D90F2 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7246EFB6182B3DF0008D90F2 /* CustomCell.m */; };
 		7255797218271BD9001592F5 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7255797118271BD9001592F5 /* MessageUI.framework */; };
-		7261CC6418651583000598F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7261CC6318651583000598F6 /* Images.xcassets */; };
 		7261CC6618651E12000598F6 /* Tab bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 7261CC6518651E12000598F6 /* Tab bar.png */; };
 		72A54A0E18558D080026A61E /* TimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72A54A0D18558D080026A61E /* TimeView.m */; };
 		72AB833A18330ECA00B378FD /* CoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AB833918330ECA00B378FD /* CoreData.m */; };
+		72B4D788187C9B7500557ECF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72B4D787187C9B7500557ECF /* Images.xcassets */; };
+		72B4D789187C9BC100557ECF /* 58.png in Resources */ = {isa = PBXBuildFile; fileRef = 72B4D77D187C9B3200557ECF /* 58.png */; };
+		72B4D78A187C9BC100557ECF /* 80.png in Resources */ = {isa = PBXBuildFile; fileRef = 72B4D77E187C9B3200557ECF /* 80.png */; };
+		72B4D78B187C9BC100557ECF /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 72B4D77F187C9B3200557ECF /* Icon-72.png */; };
+		72B4D78C187C9BC100557ECF /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 72B4D780187C9B3200557ECF /* Icon.png */; };
+		72B4D78D187C9BC100557ECF /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 72B4D781187C9B3200557ECF /* Icon@2x.png */; };
 		72EE03D717F5FB8F005E0B62 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72EE03D617F5FB8F005E0B62 /* UIKit.framework */; };
 		72EE03D917F5FB8F005E0B62 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72EE03D817F5FB8F005E0B62 /* Foundation.framework */; };
 		72EE03DB17F5FB8F005E0B62 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72EE03DA17F5FB8F005E0B62 /* CoreGraphics.framework */; };
@@ -38,22 +41,23 @@
 /* Begin PBXFileReference section */
 		720C0315182965FF00AAA98D /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
 		720C0316182965FF00AAA98D /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
-		72344E2617FDC2B60084354A /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		72344E2817FDC3930084354A /* IconRes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IconRes.png; sourceTree = "<group>"; };
 		723C578B185A414C0063D627 /* NSDateRotationScheduleFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSDateRotationScheduleFormatter.h; path = WestSchedule/Rotation/NSDateRotationScheduleFormatter.h; sourceTree = "<group>"; };
 		723C578C185A414C0063D627 /* NSDateRotationScheduleFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSDateRotationScheduleFormatter.m; path = WestSchedule/Rotation/NSDateRotationScheduleFormatter.m; sourceTree = "<group>"; };
 		7246EFB5182B3DF0008D90F2 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
 		7246EFB6182B3DF0008D90F2 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
 		7255797118271BD9001592F5 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		7255797318271C00001592F5 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		7261CC6318651583000598F6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7261CC6518651E12000598F6 /* Tab bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tab bar.png"; sourceTree = "<group>"; };
 		72A54A0C18558CAC0026A61E /* TimeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeView.h; sourceTree = "<group>"; };
 		72A54A0D18558D080026A61E /* TimeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimeView.m; path = WestSchedule/TimeView.m; sourceTree = "<group>"; };
-		72A8914F18708CFD008D71EE /* 58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 58.png; path = WestSchedule/58.png; sourceTree = "<group>"; };
-		72A8915018708D5D008D71EE /* 80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 80.png; path = WestSchedule/80.png; sourceTree = "<group>"; };
 		72AB833818330ECA00B378FD /* CoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreData.h; path = WestSchedule/CoreData.h; sourceTree = "<group>"; };
 		72AB833918330ECA00B378FD /* CoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreData.m; path = WestSchedule/CoreData.m; sourceTree = "<group>"; };
+		72B4D77D187C9B3200557ECF /* 58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 58.png; sourceTree = "<group>"; };
+		72B4D77E187C9B3200557ECF /* 80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 80.png; sourceTree = "<group>"; };
+		72B4D77F187C9B3200557ECF /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		72B4D780187C9B3200557ECF /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		72B4D781187C9B3200557ECF /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		72B4D787187C9B7500557ECF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "WMS Schedule/Images.xcassets"; sourceTree = SOURCE_ROOT; };
 		72EE03D317F5FB8F005E0B62 /* WMS Schedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WMS Schedule.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72EE03D617F5FB8F005E0B62 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		72EE03D817F5FB8F005E0B62 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -96,8 +100,6 @@
 		72EE03CA17F5FB8E005E0B62 = {
 			isa = PBXGroup;
 			children = (
-				72A8915018708D5D008D71EE /* 80.png */,
-				72A8914F18708CFD008D71EE /* 58.png */,
 				7261CC6518651E12000598F6 /* Tab bar.png */,
 				72A54A0C18558CAC0026A61E /* TimeView.h */,
 				72A54A0D18558D080026A61E /* TimeView.m */,
@@ -107,8 +109,6 @@
 				723C578C185A414C0063D627 /* NSDateRotationScheduleFormatter.m */,
 				7246EFB5182B3DF0008D90F2 /* CustomCell.h */,
 				7246EFB6182B3DF0008D90F2 /* CustomCell.m */,
-				72344E2817FDC3930084354A /* IconRes.png */,
-				72344E2617FDC2B60084354A /* Icon.png */,
 				72EE03DC17F5FB8F005E0B62 /* WMS Schedule */,
 				72EE03D517F5FB8F005E0B62 /* Frameworks */,
 				72EE03D417F5FB8F005E0B62 /* Products */,
@@ -151,7 +151,7 @@
 				72EE03F917F5FB8F005E0B62 /* SecondViewController.m */,
 				72EE03FB17F5FB8F005E0B62 /* second.png */,
 				72EE03FD17F5FB8F005E0B62 /* second@2x.png */,
-				7261CC6318651583000598F6 /* Images.xcassets */,
+				72B4D787187C9B7500557ECF /* Images.xcassets */,
 				72EE03DD17F5FB8F005E0B62 /* Supporting Files */,
 			);
 			name = "WMS Schedule";
@@ -161,6 +161,11 @@
 		72EE03DD17F5FB8F005E0B62 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				72B4D77D187C9B3200557ECF /* 58.png */,
+				72B4D77E187C9B3200557ECF /* 80.png */,
+				72B4D77F187C9B3200557ECF /* Icon-72.png */,
+				72B4D780187C9B3200557ECF /* Icon.png */,
+				72B4D781187C9B3200557ECF /* Icon@2x.png */,
 				72EE03DE17F5FB8F005E0B62 /* WMS Schedule-Info.plist */,
 				72EE03DF17F5FB8F005E0B62 /* InfoPlist.strings */,
 				72EE03E217F5FB8F005E0B62 /* main.m */,
@@ -228,18 +233,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72B4D78A187C9BC100557ECF /* 80.png in Resources */,
+				72B4D78D187C9BC100557ECF /* Icon@2x.png in Resources */,
 				72EE03E117F5FB8F005E0B62 /* InfoPlist.strings in Resources */,
 				72EE03E917F5FB8F005E0B62 /* Default.png in Resources */,
+				72B4D788187C9B7500557ECF /* Images.xcassets in Resources */,
 				72EE03EB17F5FB8F005E0B62 /* Default@2x.png in Resources */,
+				72B4D78B187C9BC100557ECF /* Icon-72.png in Resources */,
 				72EE03ED17F5FB8F005E0B62 /* Default-568h@2x.png in Resources */,
 				72EE03F017F5FB8F005E0B62 /* MainStoryboard.storyboard in Resources */,
 				72EE03F517F5FB8F005E0B62 /* first.png in Resources */,
 				72EE03F717F5FB8F005E0B62 /* first@2x.png in Resources */,
 				72EE03FC17F5FB8F005E0B62 /* second.png in Resources */,
 				72EE03FE17F5FB8F005E0B62 /* second@2x.png in Resources */,
-				7261CC6418651583000598F6 /* Images.xcassets in Resources */,
-				72344E2717FDC2B60084354A /* Icon.png in Resources */,
-				72344E2917FDC3930084354A /* IconRes.png in Resources */,
+				72B4D78C187C9BC100557ECF /* Icon.png in Resources */,
+				72B4D789187C9BC100557ECF /* 58.png in Resources */,
 				7261CC6618651E12000598F6 /* Tab bar.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +352,8 @@
 		72EE040217F5FB8F005E0B62 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -358,6 +368,8 @@
 		72EE040317F5FB8F005E0B62 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
