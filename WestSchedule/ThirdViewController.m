@@ -50,6 +50,8 @@
     _datePicker.hidden=YES;
     _doneBar.hidden=YES;
     
+    _datePicker.backgroundColor = [UIColor grayColor];
+    
     [self updateScheduleDate: [NSDate JL_currentRotationDayWithSchoolYearBeginningOnDateString:@"2014-01-06"]];
     
     
@@ -66,6 +68,8 @@
     [futureDate setDateFormat:@"yyyy-MM-d"];
 
     [self updateScheduleDate: [NSDate JL_futureRotationDayWithSchoolYearBeginningOnDateString:@"2014-01-06" futureDate:[futureDate stringFromDate:_datePicker.date]]];
+    
+    [self updateExtraPeriods];
 }
 
 
@@ -180,6 +184,17 @@
     [self updateScheduleDate: [NSDate JL_futureRotationDayWithSchoolYearBeginningOnDateString:@"2014-01-06" futureDate:[futureDate stringFromDate:_datePicker.date]]];
     [self updateExtraPeriods];
     
+}
+
+- (IBAction)todayButton:(id)sender {
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"EEE, MMM d"];
+    todaysDate = [formatter stringFromDate:[NSDate date]];
+    Date.text = todaysDate;
+    
+    [self.Schedule reloadData];
+    [self.timeView reloadData];
+    [self updateExtraPeriods];
 }
 
 - (void) updateScheduleDate: (RotationDay) tempDayInt;
