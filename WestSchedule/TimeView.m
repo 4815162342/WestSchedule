@@ -20,12 +20,17 @@
 }
 
 /*
- // Only override drawRect: if you perform custom drawing.
- // An empty implementation adversely affects performance during animation.
- - (void)drawRect:(CGRect)rect
- {
- // Drawing code
- }
+ Only override drawRect: if you perform custom drawing.
+ An empty implementation adversely affects performance during animation.
+ 
+ Comment out entirely for plain rectangles.
  */
+
+
+
+- (void)drawRect:(CGRect)rect
+{
+    self.layer.cornerRadius = 10;
+}
 
 @end
