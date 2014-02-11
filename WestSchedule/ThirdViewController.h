@@ -41,7 +41,4 @@
 - (void) updateScheduleDate: (RotationDay) rotationDayInt;
 - (void) updateExtraPeriods;
 
-
-
-
 @end

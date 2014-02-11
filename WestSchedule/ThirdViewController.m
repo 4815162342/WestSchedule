@@ -194,7 +194,13 @@
     
     [self.Schedule reloadData];
     [self.timeView reloadData];
+    
+    
+    [self updateScheduleDate: [NSDate JL_currentRotationDayWithSchoolYearBeginningOnDateString:@"2014-01-06"]];
     [self updateExtraPeriods];
+    
+    _doneBar.hidden = YES;
+    _datePicker.hidden = YES;
 }
 
 - (void) updateScheduleDate: (RotationDay) tempDayInt;

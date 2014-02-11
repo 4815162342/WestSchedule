@@ -37,8 +37,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     self.tablePicker.hidden=YES;
-    self.lockLabel.hidden=NO;
-    _lockClasses.hidden=NO;
+    [self.tablePicker deselectRowAtIndexPath:indexPath animated:YES];
     
     switch (indexPath.section)
     {
@@ -121,9 +120,6 @@
     
     self.tablePicker.hidden = NO;
     self.currentClass = 0;
-    self.lockLabel.hidden=YES;
-    _lockClasses.hidden=YES;
-    
 }
 
 
@@ -131,49 +127,36 @@
     
     self.tablePicker.hidden = NO;
     self.currentClass = 1;
-    self.lockLabel.hidden=YES;
-    _lockClasses.hidden=YES;
 }
 
 - (IBAction)Change3:(id)sender {
     
     self.tablePicker.hidden = NO;
     self.currentClass = 2;
-    self.lockLabel.hidden=YES;
-    _lockClasses.hidden=YES;
 }
 
 - (IBAction)Change4:(id)sender {
     
     self.tablePicker.hidden = NO;
     self.currentClass = 3;
-    self.lockLabel.hidden=YES;
-    _lockClasses.hidden=YES;
 }
 
 - (IBAction)Change5:(id)sender {
     
     self.tablePicker.hidden = NO;
     self.currentClass = 4;
-    self.lockLabel.hidden=YES;
-    _lockClasses.hidden=YES;
 }
 
 - (IBAction)Change6:(id)sender {
     
     self.tablePicker.hidden = NO;
     self.currentClass = 5;
-    self.lockLabel.hidden=YES;
-    _lockClasses.hidden=YES;
-    
 }
 
 - (IBAction)Change7:(id)sender {
     
     self.tablePicker.hidden = NO;
     self.currentClass = 6;
-    self.lockLabel.hidden=YES;
-    _lockClasses.hidden=YES;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:  (NSInteger)section

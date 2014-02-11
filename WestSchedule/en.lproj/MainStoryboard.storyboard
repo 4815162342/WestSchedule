@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4">
     <dependencies>
         <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
@@ -14,7 +14,7 @@
                         <viewControllerLayoutGuide type="bottom" id="z1X-Xg-f34"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="16">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OuJ-5r-pK6">
@@ -171,13 +171,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lock classes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ING-OY-xAr">
-                                <rect key="frame" x="115" y="375" width="320" height="24"/>
+                                <rect key="frame" x="115" y="365" width="320" height="24"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pV5-YK-MGa">
+                                <rect key="frame" x="150" y="400" width="51" height="31"/>
+                                <connections>
+                                    <action selector="lockClasses:" destination="2" eventType="valueChanged" id="iU3-78-VJH"/>
+                                </connections>
+                            </switch>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="u62-uB-E5X">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <color key="separatorColor" red="0.036265060262445914" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
@@ -203,12 +209,6 @@
                                     <outlet property="delegate" destination="2" id="d2g-ff-5Vn"/>
                                 </connections>
                             </tableView>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pV5-YK-MGa">
-                                <rect key="frame" x="150" y="400" width="51" height="31"/>
-                                <connections>
-                                    <action selector="lockClasses:" destination="2" eventType="valueChanged" id="iU3-78-VJH"/>
-                                </connections>
-                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -312,7 +312,7 @@
                         <viewControllerLayoutGuide type="bottom" id="tSh-FW-bh6"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="17">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcJ-R9-gv8">
@@ -375,20 +375,22 @@
                         <viewControllerLayoutGuide type="bottom" id="Jms-oW-kgc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="V0F-yy-HD9">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="#ERROR" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p17-8h-kFP">
-                                <rect key="frame" x="20" y="30" width="69" height="21"/>
+                                <rect key="frame" x="20" y="30" width="134" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Oo4-vY-hBp"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="h9d-3Q-PXg"/>
+                                    <constraint firstAttribute="width" constant="134" id="xMZ-oR-vlc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dhl-va-N4X">
-                                <rect key="frame" x="0.0" y="173" width="154" height="345"/>
+                                <rect key="frame" x="0.0" y="85" width="154" height="345"/>
                                 <color key="backgroundColor" red="0.29803922772407532" green="0.29803922772407532" blue="0.29803922772407532" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="345" id="HJZ-5y-l0O"/>
@@ -429,7 +431,7 @@
                                 </cells>
                             </collectionView>
                             <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="EIY-df-cPm">
-                                <rect key="frame" x="166" y="173" width="154" height="345"/>
+                                <rect key="frame" x="166" y="85" width="154" height="345"/>
                                 <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="345" id="eOq-wY-AzL"/>
@@ -517,7 +519,12 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="YKL-b9-p2g">
                                 <rect key="frame" x="0.0" y="143" width="320" height="44"/>
                                 <items>
-                                    <barButtonItem width="251" style="plain" systemItem="fixedSpace" id="oXt-vE-zCy"/>
+                                    <barButtonItem title="Go to Today" id="dWv-tf-jST">
+                                        <connections>
+                                            <action selector="todayButton:" destination="7JX-IF-r4h" id="7y9-Ex-g2K"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="147" style="plain" systemItem="fixedSpace" id="oXt-vE-zCy"/>
                                     <barButtonItem title="Done" id="dhr-gG-EeZ">
                                         <connections>
                                             <action selector="doneButton:" destination="7JX-IF-r4h" id="TZ7-Ji-27k"/>
@@ -526,9 +533,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                 </items>
                             </toolbar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hb2-ul-D08">
-                                <rect key="frame" x="201" y="70" width="85" height="30"/>
+                                <rect key="frame" x="118" y="43" width="85" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="OlA-pf-qgk"/>
+                                    <constraint firstAttribute="width" constant="85" id="Qtu-XJ-Zlv"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="hbj-KS-DNb"/>
                                 </constraints>
                                 <state key="normal" title="Change Day">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -538,35 +547,22 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                                     <action selector="changeButton:" destination="7JX-IF-r4h" eventType="touchUpInside" id="Ihd-2r-shk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FnZ-a4-xUO">
-                                <rect key="frame" x="36" y="70" width="82" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Go to today">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="todayButton:" destination="7JX-IF-r4h" eventType="touchUpInside" id="43p-mV-Tdh"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="dhl-va-N4X" firstAttribute="leading" secondItem="V0F-yy-HD9" secondAttribute="leading" id="1f8-9j-RAJ"/>
                             <constraint firstItem="p17-8h-kFP" firstAttribute="leading" secondItem="V0F-yy-HD9" secondAttribute="leading" constant="20" symbolic="YES" id="4GR-sk-M25"/>
+                            <constraint firstItem="p17-8h-kFP" firstAttribute="top" secondItem="f7O-BZ-mU3" secondAttribute="bottom" constant="10" id="7DJ-LE-SWw"/>
                             <constraint firstItem="EIY-df-cPm" firstAttribute="trailing" secondItem="V0F-yy-HD9" secondAttribute="trailing" id="9n4-tv-iNm"/>
-                            <constraint firstItem="Hb2-ul-D08" firstAttribute="top" secondItem="IIl-gi-sHv" secondAttribute="bottom" constant="19" id="Ad7-Me-Lxn"/>
                             <constraint firstAttribute="trailing" secondItem="IIl-gi-sHv" secondAttribute="trailing" constant="20" symbolic="YES" id="CfZ-if-pRl"/>
                             <constraint firstItem="dhl-va-N4X" firstAttribute="top" secondItem="EIY-df-cPm" secondAttribute="top" id="Cxi-JK-SKH"/>
                             <constraint firstItem="EIY-df-cPm" firstAttribute="trailing" secondItem="YKL-b9-p2g" secondAttribute="trailing" id="F93-bl-elA"/>
                             <constraint firstItem="YKL-b9-p2g" firstAttribute="bottom" secondItem="HNc-EH-uie" secondAttribute="top" id="MVY-l1-gqt"/>
-                            <constraint firstItem="Hb2-ul-D08" firstAttribute="leading" secondItem="FnZ-a4-xUO" secondAttribute="trailing" constant="83" id="Q3L-9G-h33"/>
+                            <constraint firstItem="EIY-df-cPm" firstAttribute="top" secondItem="Hb2-ul-D08" secondAttribute="bottom" constant="12" id="Nqd-eP-nAa"/>
                             <constraint firstItem="HNc-EH-uie" firstAttribute="trailing" secondItem="V0F-yy-HD9" secondAttribute="trailing" id="UQb-pF-Dn3"/>
                             <constraint firstItem="dhl-va-N4X" firstAttribute="leading" secondItem="HNc-EH-uie" secondAttribute="leading" id="Uoa-f7-eLw"/>
-                            <constraint firstItem="Hb2-ul-D08" firstAttribute="baseline" secondItem="FnZ-a4-xUO" secondAttribute="baseline" id="XyI-5o-ac3"/>
                             <constraint firstItem="YKL-b9-p2g" firstAttribute="top" secondItem="V0F-yy-HD9" secondAttribute="top" constant="143" id="iA5-xk-ef9"/>
-                            <constraint firstItem="Hb2-ul-D08" firstAttribute="centerX" secondItem="EIY-df-cPm" secondAttribute="centerX" id="j1Y-ic-5ej"/>
-                            <constraint firstItem="YKL-b9-p2g" firstAttribute="top" secondItem="Hb2-ul-D08" secondAttribute="bottom" constant="43" id="kAu-az-Xjy"/>
+                            <constraint firstItem="Hb2-ul-D08" firstAttribute="centerX" secondItem="EIY-df-cPm" secondAttribute="centerX" constant="-82.5" id="j1Y-ic-5ej"/>
                             <constraint firstItem="p17-8h-kFP" firstAttribute="baseline" secondItem="IIl-gi-sHv" secondAttribute="baseline" id="l63-PQ-g9s"/>
                             <constraint firstAttribute="bottom" secondItem="dhl-va-N4X" secondAttribute="bottom" constant="50" id="oar-XC-IV9"/>
                             <constraint firstItem="dhl-va-N4X" firstAttribute="leading" secondItem="YKL-b9-p2g" secondAttribute="leading" id="zo3-9A-UVN"/>
@@ -612,6 +608,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>

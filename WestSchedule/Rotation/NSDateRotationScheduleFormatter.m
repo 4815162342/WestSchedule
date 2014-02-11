@@ -20,7 +20,7 @@
 + (int)numberOfWeekdayBreakDaysBetweenSchoolYearBeginningDate:(NSDate *)beginningDate andEndDate:(NSDate *)endDate
 {
     int numDays = 0;
-    NSArray *weekdayBreakArray = [NSArray arrayWithObjects:@"2014-01-20", @"2014-02-17", @"2014-03-10",@"2014-03-11",@"2014-03-12",@"2014-03-13",@"2014-03-14",@"2014-04-18",@"2014-04-21",nil];
+    NSArray *weekdayBreakArray = [NSArray arrayWithObjects:@"2014-01-20", @"2014-03-10",@"2014-03-11",@"2014-03-12",@"2014-03-13",@"2014-03-14",@"2014-04-18",@"2014-04-21",nil];
     for (NSString *dateString in weekdayBreakArray)
     {
         if ([NSDate aDateFromString:dateString isBetweenDate:beginningDate andDate:endDate]) {
