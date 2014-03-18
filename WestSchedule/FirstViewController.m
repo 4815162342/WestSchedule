@@ -25,6 +25,15 @@
         
     self.currentClass = 0;
     
+    self.Class1.text = [[[CoreData theData] all7Classes] objectAtIndex:0];
+    self.Class2.text = [[[CoreData theData] all7Classes] objectAtIndex:1];
+    self.Class3.text = [[[CoreData theData] all7Classes] objectAtIndex:2];
+    self.Class4.text = [[[CoreData theData] all7Classes] objectAtIndex:3];
+    self.Class5.text = [[[CoreData theData] all7Classes] objectAtIndex:4];
+    self.Class6.text = [[[CoreData theData] all7Classes] objectAtIndex:5];
+    self.Class7.text = [[[CoreData theData] all7Classes] objectAtIndex:6];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -313,6 +322,5 @@
     Change6.hidden = NO;
     Change7.hidden = NO;
 }
-
 
 @end

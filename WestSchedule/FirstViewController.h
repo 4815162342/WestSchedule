@@ -53,7 +53,6 @@
 - (IBAction)lockClasses:(UISwitch *)sender;
 
 
-
 @property (nonatomic, assign) int currentClass;
 
 @end

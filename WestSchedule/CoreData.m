@@ -233,6 +233,8 @@
                         @"Independent Study",
                         @"P.E.",
                         @"Peer Leadership",
+                        @"Macro Econ",
+                        @"Micro Econ",
                         nil];
         
         
