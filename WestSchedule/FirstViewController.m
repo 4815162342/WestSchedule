@@ -127,8 +127,8 @@
 
 - (IBAction)Change1:(id)sender {
     
-    self.tablePicker.hidden = NO;
     self.currentClass = 0;
+    [self performSegueWithIdentifier:@"showList" sender:self];
 }
 
 
